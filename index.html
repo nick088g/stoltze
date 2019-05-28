@@ -15,13 +15,20 @@
             <div class="logo_animation"></div>
         </section>
 -->
+        <nav>
+            <a href="">Forside</a>
+            <a href="">Smykker</a>
+            <a href="">Om Stoltze</a>
+            <a href="">Kontakt</a>
+        </nav>
 
         <section id="startside">
-            <!--
+
             <div class="splash">
                 <div class="logo_animation"></div>
+                <img src="Artboard%201.svg" alt="">
             </div>
--->
+
             <video autoplay muted loop id="myVideo">
                 <source src="Sequence%2001.mp4">
             </video>
@@ -30,12 +37,11 @@
             <div class="burgermenu"></div>
         </section>
 
-        <section id="pink_kol">
+        <section id="gul_kol">
             <h1></h1>
             <div class="kollage">
-                <div class="pink_b1"></div>
-                <div class="pink_b2"></div>
-                <div class="pink_b3"></div>
+                <div class="gul_b1"></div>
+                <div class="gul_b2"></div>
                 <div class="citat"></div>
             </div>
             <div class="se_mere">
@@ -44,11 +50,12 @@
             <div class="pil"></div>
         </section>
 
-        <section id="gul_kol">
+        <section id="pink_kol">
             <h1></h1>
             <div class="kollage">
-                <div class="gul_b1"></div>
-                <div class="gul_b2"></div>
+                <div class="pink_b1"></div>
+                <div class="pink_b2"></div>
+                <div class="pink_b3"></div>
                 <div class="citat"></div>
             </div>
             <div class="se_mere">
@@ -103,12 +110,14 @@
             }
 
             function visSplash() {
-                document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
-                document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
-                document.querySelector(".pink_b3").style.backgroundImage = "url(" + splash.pink_b3.guid + ")"
 
                 document.querySelector(".gul_b1").style.backgroundImage = "url(" + splash.gul_b1.guid + ")"
                 document.querySelector(".gul_b2").style.backgroundImage = "url(" + splash.gul_b2.guid + ")"
+                document.querySelector(".citat").innerHTML = splash.citat_gul
+
+                document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
+                document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
+                document.querySelector(".pink_b3").style.backgroundImage = "url(" + splash.pink_b3.guid + ")"
 
                 document.querySelector(".blaa_b1").style.backgroundImage = "url(" + splash.blaa_b1.guid + ")"
                 document.querySelector(".blaa_b2").style.backgroundImage = "url(" + splash.blaa_b2.guid + ")"

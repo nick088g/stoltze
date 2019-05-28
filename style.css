@@ -1,0 +1,44 @@
+/*basic*/
+*,
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+#pink_kol {
+    display: flex;
+    background-color: pink;
+}
+
+#groen_kol {
+    display: flex;
+    background-color: green;
+}
+
+#blaa_kol {
+    display: flex;
+    background-color: cadetblue;
+}
+
+#gul_kol {
+    display: flex;
+    background-color: lightyellow;
+}
+
+.kollage {
+    flex-basis: 200px;
+    flex-grow: 1;
+    height: 300vh;
+}
+
+.pink_b1 {
+    display: block;
+    height: 32vw;
+    width: 20vw;
+    background-size: cover;
+}

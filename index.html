@@ -10,23 +10,26 @@
 
 <body>
     <section>
-        <section id="load_container">
-            <div class="logo_animation"></div>
-        </section>
+        <!--
+<section id="load_container">
+    <div class="logo_animation"></div>
+</section>
 
-        <section id="startside">
-            <div class="splash">
-                <div class="logo_animation"></div>
-            </div>
-            <div class="menu"></div>
-            <div class="burgermenu"></div>
-        </section>
+<section id="startside">
+    <div class="splash">
+        <div class="logo_animation"></div>
+    </div>
+    <div class="menu"></div>
+    <div class="burgermenu"></div>
+</section>
+-->
 
         <section id="pink_kol">
             <h1></h1>
             <div class="kollage">
-                <img src="" alt="">
-                <img src="" alt="">
+                <div class="pink_b1"></div>
+                <img class="pink_b2" src="" alt="">
+                <img class="pink_b3" src="" alt="">
                 <img src="" alt="">
                 <div class="citat"></div>
             </div>
@@ -80,7 +83,31 @@
         </section>
     </section>
 
-    <script src=""></script>
+    <script>
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/startside/21";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
+                document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
+                document.querySelector(".pink_b3").style.backgroundImage = "url(" + splash.pink_b3.guid + ")"
+            }
+
+            getJson();
+
+        }
+
+    </script>
 </body>
 
 </html>

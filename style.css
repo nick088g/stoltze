@@ -10,35 +10,151 @@ img {
     width: 100%;
 }
 
+#startside {
+    display: block;
+}
+
+.splash {}
+
 #pink_kol {
     display: flex;
     background-color: pink;
 }
 
 #groen_kol {
-    display: flex;
+    display: block;
     background-color: green;
 }
 
 #blaa_kol {
-    display: flex;
+    display: block;
     background-color: cadetblue;
 }
 
 #gul_kol {
-    display: flex;
+    display: block;
     background-color: lightyellow;
 }
 
 .kollage {
-    flex-basis: 200px;
-    flex-grow: 1;
-    height: 300vh;
+    flex-basis: 300px;
+    flex-grow: 3;
+    position: relative;
+    height: 85vw;
 }
 
 .pink_b1 {
-    display: block;
-    height: 32vw;
+    position: relative;
+    height: 30vw;
     width: 20vw;
     background-size: cover;
+    left: 50vw;
+    top: 5vw;
+
+}
+
+.pink_b2 {
+    position: relative;
+    height: 35vw;
+    width: 24vw;
+    background-size: cover;
+    top: -20vw;
+    left: 25vw
+}
+
+.pink_b3 {
+    position: relative;
+    height: 40vw;
+    width: 28vw;
+    background-size: cover;
+    left: 44vw;
+    bottom: 29vw;
+}
+
+.groen_b1 {
+    position: relative;
+    height: 30vw;
+    width: 20vw;
+    background-size: cover;
+    left: 50vw;
+    top: 5vw;
+
+}
+
+.groen_b2 {
+    position: relative;
+    height: 35vw;
+    width: 24vw;
+    background-size: cover;
+    top: -20vw;
+    left: 25vw
+}
+
+.groen_b3 {
+    position: relative;
+    height: 40vw;
+    width: 28vw;
+    background-size: cover;
+    left: 44vw;
+    bottom: 29vw;
+}
+
+.blaa_b1 {
+    position: relative;
+    height: 30vw;
+    width: 20vw;
+    background-size: cover;
+    left: 50vw;
+    top: 5vw;
+
+}
+
+.blaa_b2 {
+    position: relative;
+    height: 35vw;
+    width: 24vw;
+    background-size: cover;
+    top: -20vw;
+    left: 25vw
+}
+
+.blaa_b3 {
+    position: relative;
+    height: 40vw;
+    width: 28vw;
+    background-size: cover;
+    left: 44vw;
+    bottom: 29vw;
+}
+
+.gul_b1 {
+    position: relative;
+    height: 40vw;
+    width: 30vw;
+    background-size: cover;
+    left: 45vw;
+    top: 25vw;
+
+}
+
+.gul_b2 {
+    position: relative;
+    height: 35vw;
+    width: 24vw;
+    background-size: cover;
+    top: -25vw;
+    left: 25vw
+}
+
+#myVideo {
+
+    /*    position: fixed;*/
+    /*
+    right: 0;
+    bottom: 0;
+*/
+
+        min-width: 100%;
+    /*    min-height: 100%;*/
+
 }

@@ -11,26 +11,30 @@
 <body>
     <section>
         <!--
-<section id="load_container">
-    <div class="logo_animation"></div>
-</section>
-
-<section id="startside">
-    <div class="splash">
-        <div class="logo_animation"></div>
-    </div>
-    <div class="menu"></div>
-    <div class="burgermenu"></div>
-</section>
+        <section id="load_container">
+            <div class="logo_animation"></div>
+        </section>
 -->
+
+        <section id="startside">
+            <!--
+            <div class="splash">
+                <div class="logo_animation"></div>
+            </div>
+-->
+            <video autoplay muted loop id="myVideo">
+                <source src="Sequence%2001.mp4">
+            </video>
+            <div class="menu"></div>
+            <div class="burgermenu"></div>
+        </section>
 
         <section id="pink_kol">
             <h1></h1>
             <div class="kollage">
                 <div class="pink_b1"></div>
-                <img class="pink_b2" src="" alt="">
-                <img class="pink_b3" src="" alt="">
-                <img src="" alt="">
+                <div class="pink_b2"></div>
+                <div class="pink_b3"></div>
                 <div class="citat"></div>
             </div>
             <div class="se_mere">
@@ -42,9 +46,8 @@
         <section id="groen_kol">
             <h1></h1>
             <div class="kollage">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <div class="gul_b1"></div>
+                <div class="gul_b2"></div>
                 <div class="citat"></div>
             </div>
             <div class="se_mere">
@@ -56,9 +59,9 @@
         <section id="blaa_kol">
             <h1></h1>
             <div class="kollage">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <div class="blaa_b1"></div>
+                <div class="blaa_b2"></div>
+                <div class="blaa_b3"></div>
                 <div class="citat"></div>
             </div>
             <div class="se_mere">
@@ -67,11 +70,12 @@
             <div class="pil"></div>
         </section>
 
-        <section id="gul_kol">
+        <section id="groen_kol">
             <h1></h1>
             <div class="kollage">
-                <img src="" alt="">
-                <img src="" alt="">
+                <div class="groen_b1"></div>
+                <div class="groen_b2"></div>
+                <div class="groen_b3"></div>
                 <div class="citat"></div>
             </div>
 
@@ -101,12 +105,22 @@
                 document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
                 document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
                 document.querySelector(".pink_b3").style.backgroundImage = "url(" + splash.pink_b3.guid + ")"
+
+                document.querySelector(".gul_b1").style.backgroundImage = "url(" + splash.gul_b1.guid + ")"
+                document.querySelector(".gul_b2").style.backgroundImage = "url(" + splash.gul_b2.guid + ")"
+
+                document.querySelector(".blaa_b1").style.backgroundImage = "url(" + splash.blaa_b1.guid + ")"
+                document.querySelector(".blaa_b2").style.backgroundImage = "url(" + splash.blaa_b2.guid + ")"
+                document.querySelector(".blaa_b3").style.backgroundImage = "url(" + splash.blaa_b3.guid + ")"
+
+                document.querySelector(".groen_b1").style.backgroundImage = "url(" + splash.groen_b1.guid + ")"
+                document.querySelector(".groen_b2").style.backgroundImage = "url(" + splash.groen_b2.guid + ")"
+                document.querySelector(".groen_b3").style.backgroundImage = "url(" + splash.groen_b3.guid + ")"
             }
 
             getJson();
 
         }
-
     </script>
 </body>
 

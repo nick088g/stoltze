@@ -18,23 +18,25 @@ img {
 
 #pink_kol {
     display: flex;
-    background-color: pink;
-}
-
-#groen_kol {
-    display: block;
-    background-color: green;
-}
-
-#blaa_kol {
-    display: block;
-    background-color: cadetblue;
+    background-color: #D2DCE5;
 }
 
 #gul_kol {
     display: block;
-    background-color: lightyellow;
+    background-color: #BC9C67;
 }
+
+#groen_kol {
+    display: block;
+    background-color: #CC8A7E;
+}
+
+#blaa_kol {
+    display: block;
+    background-color: #879D93;
+}
+
+
 
 .kollage {
     flex-basis: 300px;
@@ -154,7 +156,7 @@ img {
     bottom: 0;
 */
 
-        min-width: 100%;
+    min-width: 100%;
     /*    min-height: 100%;*/
 
 }

@@ -15,7 +15,7 @@
             <div class="logo_animation"></div>
         </section>
 -->
-        <nav>
+        <nav id="navbar" class="">
             <a href="#">Forside</a>
             <a href="">Smykker</a>
             <a href="om.html">Om Stoltze</a>
@@ -23,10 +23,9 @@
         </nav>
 
         <section id="startside">
-
             <div class="splash">
                 <div class="logo_animation"></div>
-                <img src="artboard_1.svg" alt="">
+                <div id="skift" class="logo_sort"></div>
             </div>
 
             <video autoplay muted loop id="myVideo">
@@ -45,9 +44,10 @@
                 <div class="citat_gul"></div>
             </div>
             <div class="se_mere">
-                <div class="se_mere_pil"></div>
             </div>
-            <div class="pil"></div>
+            <div class="pil">
+                <img class="hvid_pil" src="pil.svg" alt="">
+            </div>
         </section>
 
         <section id="pink_kol">
@@ -58,8 +58,10 @@
                 <div class="pink_b3"></div>
                 <div class="citat"></div>
             </div>
-            <div class="se_mere">
-                <div class="se_mere_pil"></div>
+            <div class="se_mere_pink">
+            </div>
+            <div class="pil">
+                <img class="hvid_pil" src="pil.svg" alt="">
             </div>
             <div class="pil"></div>
         </section>
@@ -72,10 +74,12 @@
                 <div class="blaa_b3"></div>
                 <div class="citat"></div>
             </div>
+
             <div class="se_mere">
                 <div class="se_mere_pil"></div>
             </div>
             <div class="pil"></div>
+
         </section>
 
         <section id="groen_kol">
@@ -122,10 +126,12 @@
                 document.querySelector(".gul_b1").style.backgroundImage = "url(" + splash.gul_b1.guid + ")"
                 document.querySelector(".gul_b2").style.backgroundImage = "url(" + splash.gul_b2.guid + ")"
                 document.querySelector(".citat_gul").innerHTML = splash.citat_gul
+                document.querySelector(".se_mere").innerHTML = splash.se_mere
 
                 document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
                 document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
                 document.querySelector(".pink_b3").style.backgroundImage = "url(" + splash.pink_b3.guid + ")"
+                document.querySelector(".se_mere_pink").innerHTML = splash.se_mere
 
                 document.querySelector(".blaa_b1").style.backgroundImage = "url(" + splash.blaa_b1.guid + ")"
                 document.querySelector(".blaa_b2").style.backgroundImage = "url(" + splash.blaa_b2.guid + ")"
@@ -138,9 +144,20 @@
             }
 
             getJson();
+            scrollLogo();
 
         }
 
+        function scrollLogo() {
+            console.log(scroll)
+            window.onscroll = () => {
+                const nav = document.querySelector('#skift');
+                if (window.body.scrollY >= 20) {
+                    nav.className = '';
+                    nav.classList.add = '.logo_sort'
+                }
+            };
+        }
     </script>
 </body>
 

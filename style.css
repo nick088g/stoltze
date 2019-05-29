@@ -12,9 +12,9 @@ img {
 
 #startside {
     display: block;
-}
 
-.splash {}
+    overflow: hidden;
+}
 
 #pink_kol {
     display: flex;
@@ -163,33 +163,36 @@ img {
 }
 
 nav {
-    /*    display: inline-flex;*/
     position: fixed;
-
     flex-direction: column;
 
     justify-content: space-around;
     z-index: 2;
 
     margin-left: 2vw;
-
     font-size: 1.12rem;
 }
 
-nav a {
+a {
     color: white;
+}
+
+nav a {
     display: block;
     padding: 12px;
     text-decoration: none;
 
     transform: rotate(-90deg);
     margin-top: 8vw;
-
 }
 
 nav a:hover {
     cursor: pointer;
     animation: drej 0.1s linear forwards;
+}
+
+nav.scroll {
+    background-color: black;
 }
 
 
@@ -395,4 +398,66 @@ om_container {
 
     transform: rotate(180deg);
     transform: scaleY(-1);
+}
+
+.se_mere {
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+
+.logo_sort {
+    background-image: url(artboard_1.svg);
+    background-size: cover;
+    height: 30vw;
+    width: auto;
+}
+
+.logo_hvid {
+    background-image: url(artboard_2.svg);
+    background-size: cover;
+    height: 10vw;
+    width: 50vw;
+}
+
+#skfit {
+    position: fixed;
+}
+
+.se_mere {
+    width: 10vw;
+    height: 2vw;
+    font-size: 2.8rem;
+
+    position: relative;
+    left: 64vw;
+    bottom: 10vw;
+
+    color: white;
+    font-style: italic;
+}
+
+.se_mere_pink {
+    width: 10vw;
+    height: 2vw;
+    font-size: 2.8rem;
+
+    position: relative;
+    left: 64vw;
+    bottom: 1vw;
+
+    color: white;
+    font-style: italic;
+}
+
+.pil {
+    position: relative;
+
+    height: 4vw;
+    width: 20vw;
+
+    bottom: 10.5vw;
+    left: 60vw;
 }

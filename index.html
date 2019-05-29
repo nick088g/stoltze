@@ -16,10 +16,10 @@
         </section>
 -->
         <nav>
-            <a href="">Forside</a>
+            <a href="#">Forside</a>
             <a href="">Smykker</a>
             <a href="">Om Stoltze</a>
-            <a href="">Kontakt</a>
+            <a href="kontakt.html">Kontakt</a>
         </nav>
 
         <section id="startside">
@@ -42,7 +42,7 @@
             <div class="kollage">
                 <div class="gul_b1"></div>
                 <div class="gul_b2"></div>
-                <div class="citat"></div>
+                <div class="citat_gul"></div>
             </div>
             <div class="se_mere">
                 <div class="se_mere_pil"></div>
@@ -84,7 +84,7 @@
                 <div class="groen_b1"></div>
                 <div class="groen_b2"></div>
                 <div class="groen_b3"></div>
-                <div class="citat"></div>
+                <div class="citat_groen"></div>
             </div>
 
             <div class="se_mere">
@@ -121,7 +121,7 @@
 
                 document.querySelector(".gul_b1").style.backgroundImage = "url(" + splash.gul_b1.guid + ")"
                 document.querySelector(".gul_b2").style.backgroundImage = "url(" + splash.gul_b2.guid + ")"
-                document.querySelector(".citat").innerHTML = splash.citat_gul
+                document.querySelector(".citat_gul").innerHTML = splash.citat_gul
 
                 document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
                 document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
@@ -134,6 +134,7 @@
                 document.querySelector(".groen_b1").style.backgroundImage = "url(" + splash.groen_b1.guid + ")"
                 document.querySelector(".groen_b2").style.backgroundImage = "url(" + splash.groen_b2.guid + ")"
                 document.querySelector(".groen_b3").style.backgroundImage = "url(" + splash.groen_b3.guid + ")"
+                document.querySelector(".citat_groen").innerHTML = splash.citat_groen
             }
 
             getJson();

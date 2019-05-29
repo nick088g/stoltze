@@ -36,8 +36,6 @@ img {
     background-color: #879D93;
 }
 
-
-
 .kollage {
     flex-basis: 300px;
     flex-grow: 3;
@@ -299,21 +297,21 @@ kontakt_container {
 .logo {
     position: absolute;
 
-    height: 15vw;
-    width: 80vw;
+    height: auto;
+    width: 40vw;
 
-    top: 1vw;
-    left: -2vw;
+    top: 20vw;
+    left: 17.5vw;
 }
 
 .kontakt_logo {
     position: absolute;
 
-    height: 22vw;
-    width: auto;
+    height: auto;
+    width: 20vw;
 
-    top: 0.55vw;
-    left: 10vw;
+    top: 8.4vw;
+    left: 20vw;
 
     transform: rotate(90deg);
 }
@@ -324,5 +322,77 @@ kontakt_container {
     height: 20vw;
     width: auto;
 
-    left: 8.5vw;
+    left: 21.5vw;
+}
+
+
+/*om os siden*/
+
+om_container {
+    display: block;
+
+}
+
+.splash_billede_om {
+    flex-basis: 200px;
+    flex-grow: 1;
+
+    height: 55vw;
+    width: 68vw;
+
+    top: 0vw;
+    right: 0vw;
+
+    position: absolute;
+    background-size: cover;
+
+    opacity: 0.6;
+}
+
+.om_bar {
+    flex-basis: 200px;
+    flex-grow: 1;
+
+    position: relative;
+
+    background-color: #E6D2D5;
+
+    height: 100vw;
+    width: 32vw;
+    flex-direction: column;
+}
+
+.om_logo_stoltze {
+    position: absolute;
+
+    height: auto;
+    width: 50vw;
+
+    top: 20.6vw;
+    left: 6.5vw;
+
+    transform: rotate(90deg);
+}
+
+.om_logo {
+    position: absolute;
+
+    height: 4.5vw;
+    width: auto;
+
+    top: 1vw;
+    left: 16vw;
+}
+
+.om_linje {
+    position: absolute;
+
+    height: 42vw;
+    width: auto;
+
+    left: 12vw;
+    top: 6vw;
+
+    transform: rotate(180deg);
+    transform: scaleY(-1);
 }

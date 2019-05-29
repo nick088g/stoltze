@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolette Stoltze - Kontakt</title>
+    <title>Nicolette Stoltze - Om Stoltze</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,17 +13,17 @@
         <nav>
             <a href="index.html">Forside</a>
             <a href="">Smykker</a>
-            <a href="om.html">Om Stoltze</a>
-            <a href="#">Kontakt</a>
+            <a href="">Om Stoltze</a>
+            <a href="kontakt.html">Kontakt</a>
         </nav>
 
-        <section class="kontakt_container">
-            <div class="splash_billede"></div>
-            <div class="bar">
-                <img class="kontakt_logo" src="kontakt_logo.svg" alt="">
-                <img class="kontakt_linje" src="kontakt_linje.svg" alt="">
+        <section class="om_container">
+            <div class="splash_billede_om"></div>
+            <div class="om_bar">
+                <img class="om_logo" src="om.svg" alt="">
+                <img class="om_linje" src="kontakt_linje.svg" alt="">
             </div>
-            <div class="logo">
+            <div class="om_logo_stoltze">
                 <img src="artboard_2.svg" alt="">
             </div>
 
@@ -45,7 +45,7 @@
         function start() {
 
             async function getJson() {
-                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/49";
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/om/53";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(getJson)
@@ -55,14 +55,13 @@
             function visSplash() {
                 console.log(splash)
 
-                document.querySelector(".splash_billede").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
+                document.querySelector(".splash_billede_om").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
 
             }
 
             getJson();
 
         }
-
     </script>
 </body>
 

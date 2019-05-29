@@ -104,29 +104,29 @@ img {
 .blaa_b1 {
     position: relative;
     height: 30vw;
-    width: 20vw;
+    width: 22vw;
     background-size: cover;
     left: 50vw;
-    top: 5vw;
+    top: 20vw;
 
 }
 
 .blaa_b2 {
     position: relative;
-    height: 35vw;
+    height: 45vw;
     width: 24vw;
     background-size: cover;
-    top: -20vw;
+    top: -22vw;
     left: 25vw
 }
 
 .blaa_b3 {
     position: relative;
-    height: 40vw;
-    width: 28vw;
+    height: 25vw;
+    width: 38vw;
     background-size: cover;
-    left: 44vw;
-    bottom: 29vw;
+    left: 34vw;
+    bottom: 24vw;
 }
 
 .gul_b1 {
@@ -190,7 +190,6 @@ nav a {
 nav a:hover {
     cursor: pointer;
     animation: drej 0.1s linear forwards;
-    transform-origin: center;
 }
 
 
@@ -204,7 +203,7 @@ nav a:hover {
     100% {
         transform: rotate(0deg);
         transform-origin: center;
-        /*        margin-left: 1vw;*/
+        /*                margin-left: 1vw;*/
     }
 }
 
@@ -228,4 +227,21 @@ nav a:hover {
 
     top: 10vw;
     left: 20vw;
+}
+
+.footer_container {
+    display: flex;
+    background-color: darkgrey;
+    height: 15vw;
+
+    text-align: center;
+}
+
+.footer_1,
+.footer_2,
+.footer_3 {
+    flex-basis: 200px;
+    flex-grow: 1;
+
+    padding-top: 3vw;
 }

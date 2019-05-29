@@ -93,6 +93,13 @@
 
             <div class="pil"></div>
         </section>
+        <footer>
+            <div class="footer_container">
+                <div class="footer_1">Nicolette Stoltze Jewellery</div>
+                <div class="footer_2">Opening Hours</div>
+                <div class="footer_3">+45 25 15 46 75</div>
+            </div>
+        </footer>
     </section>
 
     <script>
@@ -105,11 +112,12 @@
                 let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/startside/21";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
-                console.log(splash)
+                console.log(getJson)
                 visSplash();
             }
 
             function visSplash() {
+                console.log(splash)
 
                 document.querySelector(".gul_b1").style.backgroundImage = "url(" + splash.gul_b1.guid + ")"
                 document.querySelector(".gul_b2").style.backgroundImage = "url(" + splash.gul_b2.guid + ")"

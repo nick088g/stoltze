@@ -261,3 +261,68 @@ nav a:hover {
 
     padding-top: 3vw;
 }
+
+kontakt_container {
+    display: block;
+
+}
+
+.splash_billede {
+    flex-basis: 200px;
+    flex-grow: 1;
+
+    height: 55vw;
+    width: 100vw;
+
+    top: 0vw;
+    right: 0vw;
+
+    position: absolute;
+    background-size: cover;
+
+    opacity: 0.6;
+}
+
+.bar {
+    flex-basis: 200px;
+    flex-grow: 1;
+
+    position: relative;
+
+    background-color: #719198;
+
+    height: 100vw;
+    width: 32vw;
+    flex-direction: column;
+}
+
+.logo {
+    position: absolute;
+
+    height: 15vw;
+    width: 80vw;
+
+    top: 1vw;
+    left: -2vw;
+}
+
+.kontakt_logo {
+    position: absolute;
+
+    height: 22vw;
+    width: auto;
+
+    top: 0.55vw;
+    left: 10vw;
+
+    transform: rotate(90deg);
+}
+
+.kontakt_linje {
+    position: absolute;
+
+    height: 20vw;
+    width: auto;
+
+    left: 8.5vw;
+}

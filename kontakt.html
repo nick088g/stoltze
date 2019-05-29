@@ -17,6 +17,19 @@
             <a href="#">Kontakt</a>
         </nav>
 
+        <section class="kontakt_container">
+            <div class="splash_billede"></div>
+            <div class="bar">
+                <img class="kontakt_logo" src="kontakt_logo.svg" alt="">
+                <img class="kontakt_linje" src="kontakt_linje.svg" alt="">
+            </div>
+            <div class="logo">
+                <img src="artboard_2.svg" alt="">
+            </div>
+
+            <!--            <div class="kontakt_info_container"></div>-->
+        </section>
+
         <footer>
             <div class="footer_container">
                 <div class="footer_1">Nicolette Stoltze Jewellery</div>
@@ -26,6 +39,29 @@
         </footer>
     </section>
     <script>
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/49";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(getJson)
+                visSplash();
+            }
+
+            function visSplash() {
+                console.log(splash)
+
+                document.querySelector(".splash_billede").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
+
+            }
+
+            getJson();
+
+        }
     </script>
 </body>
 

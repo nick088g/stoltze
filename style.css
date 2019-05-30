@@ -13,7 +13,7 @@ img {
 #startside {
     display: block;
 
-    overflow: hidden;
+    /*    overflow: hidden;*/
 }
 
 #pink_kol {
@@ -177,6 +177,7 @@ a {
     color: white;
 }
 
+
 nav a {
     display: block;
     padding: 12px;
@@ -239,11 +240,11 @@ nav.scroll {
 .splash {
     position: fixed;
 
-    height: 15vw;
-    width: 60vw;
+    height: auto;
+    width: auto;
 
-    top: 10vw;
-    left: 20vw;
+    top: 20vw;
+    left: 31vw;
 }
 
 .footer_container {
@@ -410,16 +411,29 @@ om_container {
 
 .logo_sort {
     background-image: url(artboard_1.svg);
-    background-size: cover;
-    height: 30vw;
-    width: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 7vw;
+    width: 40vw;
+    animation: stoltze_logo_sort 1s linear forwards;
+}
+
+.logo_sort_transform {
+    animation: stoltze_logo_sort 1s linear forwards;
 }
 
 .logo_hvid {
-    background-image: url(artboard_2.svg);
-    background-size: cover;
-    height: 10vw;
-    width: 50vw;
+    background-image: url(artboard_3.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 7vw;
+    width: 40vw;
+
+    margin-top: 2vw;
+
+    position: absolute;
+
+    animation: stoltze_logo 0.5s linear forwards;
 }
 
 #skfit {
@@ -460,4 +474,24 @@ om_container {
 
     bottom: 10.5vw;
     left: 60vw;
+}
+
+.black {
+    background-color: black;
+}
+
+#stop {
+    left: 31vw;
+}
+
+
+@keyframes stoltze_logo {
+
+    0% {
+        transform: translateY(-88px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }

@@ -37,7 +37,7 @@
         </section>
 
         <section id="gul_kol">
-            <h1></h1>
+            <div id="stop"></div>
             <div class="kollage">
                 <div class="gul_b1"></div>
                 <div class="gul_b2"></div>
@@ -58,12 +58,14 @@
                 <div class="pink_b3"></div>
                 <div class="citat"></div>
             </div>
+            <!--
             <div class="se_mere_pink">
             </div>
             <div class="pil">
                 <img class="hvid_pil" src="pil.svg" alt="">
             </div>
             <div class="pil"></div>
+-->
         </section>
 
         <section id="blaa_kol">
@@ -75,10 +77,12 @@
                 <div class="citat"></div>
             </div>
 
+            <!--
             <div class="se_mere">
                 <div class="se_mere_pil"></div>
             </div>
             <div class="pil"></div>
+-->
 
         </section>
 
@@ -91,11 +95,13 @@
                 <div class="citat_groen"></div>
             </div>
 
-            <div class="se_mere">
-                <div class="se_mere_pil"></div>
-            </div>
+            <!--
+<div class="se_mere">
+    <div class="se_mere_pil"></div>
+</div>
 
-            <div class="pil"></div>
+<div class="pil"></div>
+-->
         </section>
         <footer>
             <div class="footer_container">
@@ -131,7 +137,6 @@
                 document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
                 document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
                 document.querySelector(".pink_b3").style.backgroundImage = "url(" + splash.pink_b3.guid + ")"
-                document.querySelector(".se_mere_pink").innerHTML = splash.se_mere
 
                 document.querySelector(".blaa_b1").style.backgroundImage = "url(" + splash.blaa_b1.guid + ")"
                 document.querySelector(".blaa_b2").style.backgroundImage = "url(" + splash.blaa_b2.guid + ")"
@@ -149,14 +154,20 @@
         }
 
         function scrollLogo() {
-            console.log(scroll)
-            window.onscroll = () => {
-                const nav = document.querySelector('#skift');
-                if (window.body.scrollY >= 20) {
-                    nav.className = '';
-                    nav.classList.add = '.logo_sort'
-                }
+            window.onscroll = function() {
+                myFunction()
             };
+
+            function myFunction() {
+                if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
+                    document.getElementById("skift").className = '';
+                    document.getElementById("stop").className = "logo_hvid";
+                    document.getElementById("navbar").style.color = "black";
+                } else {
+                    document.getElementById("skift").className = "logo_sort logo_sort_transform";
+                    document.getElementById("stop").className = "";
+                }
+            }
         }
     </script>
 </body>

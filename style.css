@@ -145,7 +145,7 @@ img {
     width: 26vw;
     background-size: cover;
     top: -28vw;
-    left: 25vw
+    left: 25vw;
 }
 
 #myVideo {
@@ -264,6 +264,8 @@ nav.scroll {
     padding-top: 3vw;
 }
 
+/*---------kontakt-siden----------*/
+
 kontakt_container {
     display: block;
 
@@ -327,8 +329,124 @@ kontakt_container {
     width: auto;
 
     left: 21.5vw;
+
 }
 
+.kontakt_linje2 {
+    position: absolute;
+
+    height: 40vw;
+    width: auto;
+
+    left: 10.5vw;
+    bottom: 8vw;
+
+    transform: rotate(180deg);
+}
+
+.info_butikker {
+    width: 20vw;
+    height: 45vw;
+
+    position: absolute;
+
+
+    left: 13vw;
+    bottom: 0vw;
+
+    color: white;
+    font-style: italic;
+}
+
+.info_butikker h3 {
+    margin-top: 1vw;
+}
+
+.info_butikker p {
+    margin-bottom: 1vw;
+}
+
+.kontakt_info_container {
+    /*    background-color: aquamarine;*/
+    padding: 4vw;
+
+    width: 34vw;
+    height: 30vw;
+
+    position: absolute;
+    left: 32vw;
+    top: 55vw;
+
+    color: black;
+    font-style: italic;
+}
+
+.kontakt_info_container p {
+    font-size: 2vw;
+    margin-top: 1.4vw;
+}
+
+.kontakt_info_container h3 {
+    font-size: 3.2vw;
+    text-decoration: underline;
+}
+
+.kontakt_info_container2 {
+    /*    background-color: skyblue;*/
+    padding: 4vw 4vw 4vw 8vw;
+
+    width: 34vw;
+    height: 30vw;
+
+    position: absolute;
+    left: 66vw;
+    top: 55vw;
+
+    color: black;
+    font-style: italic;
+}
+
+.kontakt_info_container2 p {
+    font-size: 2vw;
+    margin-top: 1.4vw;
+}
+
+.kontakt_info_container2 h3 {
+    font-size: 3.2vw;
+    text-decoration: underline;
+}
+
+.kontakt_info_container3 {
+/*    background-color: red;*/
+    padding: 4vw 4vw 4vw 8vw;
+
+    width: 68vw;
+    height: 15vw;
+
+    position: absolute;
+    left: 32vw;
+    top: 85vw;
+
+    color: black;
+    font-style: italic;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #719198;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 
 /*om os siden*/
 
@@ -415,7 +533,6 @@ om_container {
     background-repeat: no-repeat;
     height: 7vw;
     width: 40vw;
-    animation: stoltze_logo_sort 1s linear forwards;
 }
 
 .logo_sort_transform {
@@ -476,10 +593,6 @@ om_container {
     left: 60vw;
 }
 
-.black {
-    background-color: black;
-}
-
 #stop {
     left: 31vw;
 }
@@ -492,6 +605,23 @@ om_container {
     }
 
     100% {
+        transform: translateY(0px);
+    }
+}
+
+.slideUp {
+    animation-name: slideUp 3s linear forwards;
+    visibility: visible;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    100% {
+        opacity: 1;
         transform: translateY(0px);
     }
 }

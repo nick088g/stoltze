@@ -22,12 +22,22 @@
             <div class="bar">
                 <img class="kontakt_logo" src="kontakt_logo.svg" alt="">
                 <img class="kontakt_linje" src="kontakt_linje.svg" alt="">
+                <div class="info_butikker"></div>
+                <img class="kontakt_linje2" src="kontakt_linje.svg" alt="">
             </div>
             <div class="logo">
                 <img src="artboard_2.svg" alt="">
             </div>
-
-            <!--            <div class="kontakt_info_container"></div>-->
+            <div class="kontakt_info_container"></div>
+            <div class="kontakt_info_container2"></div>
+            <div class="kontakt_info_container3">
+                <form>
+                    <label for="lname">Nyhedsbrev</label>
+                    <input type="text" id="fname" name="fname" placeholder="Navn">
+                    <input type="text" id="lname" name="lname" placeholder="Email">
+                    <input type="submit" value="Tilmeld mig">
+                </form>
+            </div>
         </section>
 
         <footer>
@@ -40,10 +50,11 @@
     </section>
     <script>
         let splash;
+        let splashTwo;
+        let splashThree;
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
-
             async function getJson() {
                 let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/49";
                 let jsonData = await fetch(url);
@@ -56,13 +67,38 @@
                 console.log(splash)
 
                 document.querySelector(".splash_billede").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
-
+                document.querySelector(".info_butikker").innerHTML = splash.content.rendered;
+            }
+            getJson();
+            async function getJson2() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/58";
+                let jsonData = await fetch(url);
+                splashTwo = await jsonData.json();
+                console.log(getJson)
+                visÅbningstider();
             }
 
-            getJson();
+            function visÅbningstider() {
+                console.log(splashTwo)
 
+                document.querySelector(".kontakt_info_container").innerHTML = splashTwo.content.rendered;
+            }
+            getJson2();
+            async function getJson3() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/59";
+                let jsonData = await fetch(url);
+                splashThree = await jsonData.json();
+                console.log(getJson)
+                visKontakt();
+            }
+
+            function visKontakt() {
+                console.log(splashThree)
+
+                document.querySelector(".kontakt_info_container2").innerHTML = splashThree.content.rendered;
+            }
+            getJson3();
         }
-
     </script>
 </body>
 

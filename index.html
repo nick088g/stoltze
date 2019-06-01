@@ -45,7 +45,7 @@
             </div>
             <div class="se_mere">
             </div>
-            <div class="pil">
+            <div class="se_mere_pil">
                 <img class="hvid_pil" src="pil.svg" alt="">
             </div>
         </section>
@@ -57,15 +57,12 @@
                 <div class="pink_b2"></div>
                 <div class="pink_b3"></div>
                 <div class="citat"></div>
-            </div>
-            <!--
-            <div class="se_mere_pink">
-            </div>
-            <div class="pil">
-                <img class="hvid_pil" src="pil.svg" alt="">
+                <div class="se_mere_pink"></div>
+                <div class="se_mere_pil_pink">
+                    <img class="hvid_pil" src="pil.svg" alt="">
+                </div>
             </div>
             <div class="pil"></div>
--->
         </section>
 
         <section id="blaa_kol">
@@ -75,14 +72,13 @@
                 <div class="blaa_b2"></div>
                 <div class="blaa_b3"></div>
                 <div class="citat"></div>
-            </div>
-
-            <!--
-            <div class="se_mere">
-                <div class="se_mere_pil"></div>
+                <div class="se_mere_blaa">
+                    <div class="se_mere_pil_blaa">
+                        <img class="hvid_pil" src="pil.svg" alt="">
+                    </div>
+                </div>
             </div>
             <div class="pil"></div>
--->
 
         </section>
 
@@ -93,15 +89,14 @@
                 <div class="groen_b2"></div>
                 <div class="groen_b3"></div>
                 <div class="citat_groen"></div>
+                <div class="se_mere_groen"></div>
+                <div class="se_mere_pil_groen">
+                    <img class="hvid_pil" src="pil.svg" alt="">
+                </div>
+
+
+                <div class="pil"></div>
             </div>
-
-            <!--
-<div class="se_mere">
-    <div class="se_mere_pil"></div>
-</div>
-
-<div class="pil"></div>
--->
         </section>
         <footer>
             <div class="footer_container">
@@ -137,15 +132,18 @@
                 document.querySelector(".pink_b1").style.backgroundImage = "url(" + splash.pink_b1.guid + ")"
                 document.querySelector(".pink_b2").style.backgroundImage = "url(" + splash.pink_b2.guid + ")"
                 document.querySelector(".pink_b3").style.backgroundImage = "url(" + splash.pink_b3.guid + ")"
+                document.querySelector(".se_mere_pink").innerHTML = splash.se_mere
 
                 document.querySelector(".blaa_b1").style.backgroundImage = "url(" + splash.blaa_b1.guid + ")"
                 document.querySelector(".blaa_b2").style.backgroundImage = "url(" + splash.blaa_b2.guid + ")"
                 document.querySelector(".blaa_b3").style.backgroundImage = "url(" + splash.blaa_b3.guid + ")"
+                document.querySelector(".se_mere_blaa").innerHTML = splash.se_mere
 
                 document.querySelector(".groen_b1").style.backgroundImage = "url(" + splash.groen_b1.guid + ")"
                 document.querySelector(".groen_b2").style.backgroundImage = "url(" + splash.groen_b2.guid + ")"
                 document.querySelector(".groen_b3").style.backgroundImage = "url(" + splash.groen_b3.guid + ")"
                 document.querySelector(".citat_groen").innerHTML = splash.citat_groen
+                document.querySelector(".se_mere_groen").innerHTML = splash.se_mere
             }
 
             getJson();

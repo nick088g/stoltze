@@ -22,12 +22,17 @@
             <div class="om_bar">
                 <img class="om_logo" src="om.svg" alt="">
                 <img class="om_linje" src="kontakt_linje.svg" alt="">
+                <div class="portrait"></div>
             </div>
             <div class="om_logo_stoltze">
                 <img src="artboard_2.svg" alt="">
             </div>
+            <div class="om_info_container"></div>
+            <div class="om_info_container2">
+                <div class="video_container">
+                </div>
+            </div>
 
-            <!--            <div class="kontakt_info_container"></div>-->
         </section>
 
         <footer>
@@ -56,6 +61,9 @@
                 console.log(splash)
 
                 document.querySelector(".splash_billede_om").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
+                document.querySelector(".om_info_container").innerHTML = splash.content.rendered;
+                document.querySelector(".video_container").style.backgroundImage = "url(" + splash.om_video.guid + ")"
+                document.querySelector(".portrait").style.backgroundImage = "url(" + splash.portrait.guid + ")"
 
             }
 

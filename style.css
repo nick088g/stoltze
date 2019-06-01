@@ -446,6 +446,19 @@ input[type=submit] {
     cursor: pointer;
 }
 
+.instagram_logo {
+    background-image: url(logo_instagram.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    top: 135.4vh;
+    right: 28vw;
+
+    height: 6vh;
+    width: 3vw;
+}
+
 /*om os siden*/
 
 om_container {
@@ -518,7 +531,6 @@ om_container {
 }
 
 .portrait {
-    background-color: palevioletred;
     padding: 4vw 4vw 4vw 6vw;
 
     width: 20vw;
@@ -635,6 +647,8 @@ om_container {
 
     color: white;
     font-style: italic;
+
+    cursor: default;
 }
 
 .se_mere_pil {
@@ -658,7 +672,7 @@ om_container {
     left: 64vw;
     bottom: 3.5vw;
 
-
+    cursor: default;
 
     color: white;
     font-style: italic;
@@ -681,6 +695,8 @@ om_container {
     font-size: 2.8rem;
     /*    background-color: aqua;*/
 
+    cursor: default;
+
     position: absolute;
 
     left: 64vw;
@@ -700,14 +716,25 @@ om_container {
     width: 20vw;
 
     bottom: 2vw;
-    left: 30vw;
+    left: 60vw;
 }
+
+.se_mere_pil:hover,
+.se_mere_pil_gul:hover,
+.se_mere_pil_pink:hover,
+.se_mere_pil_blaa:hover,
+.se_mere_pil_groen:hover {
+    animation: drej 0.1s linear forwards;
+}
+
 
 .se_mere_groen {
     width: 10vw;
     height: 4vw;
     font-size: 2.8rem;
     /*    background-color: aqua;*/
+
+    cursor: default;
 
     position: absolute;
 
@@ -747,6 +774,7 @@ om_container {
     }
 }
 
+/*
 .slideUp {
     animation-name: slideUp 3s linear forwards;
     visibility: visible;
@@ -774,4 +802,79 @@ om_container {
     to {
         stroke-dashoffset: 0;
     }
+}
+*/
+
+/*----------singleView---------------*/
+
+#se_mere {
+    display: flex;
+}
+
+.smykke_tekst_container {
+    flex-basis: 200px;
+    flex-grow: 5;
+
+    height: 100vh;
+    width: 40vw;
+}
+
+.smykke_tekst {
+    height: 92vh;
+    width: 50vw;
+
+    background-color: #BC9C67;
+
+    left: 2vw;
+    top: 2vw;
+    position: absolute;
+
+    padding: 10vw;
+
+    color: white;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.smykke_billede_container {
+    flex-basis: 200px;
+    flex-grow: 8;
+}
+
+.smykke_billede {
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*    position: absolute;*/
+
+    height: 100vh;
+}
+
+.tilbage {
+    width: 16vw;
+    height: 4vw;
+    font-size: 2.8rem;
+    /*    background-color: aqua;*/
+
+    cursor: default;
+
+    position: absolute;
+
+    left: 10vw;
+    bottom: 5vw;
+
+    color: white;
+    font-style: italic;
+
+}
+
+.pil_tilbage {
+    position: absolute;
+
+    height: 4vw;
+    width: 20vw;
+
+    bottom: 3.5vw;
+    left: 2vw;
+
+    transform: scaleX(-1);
 }

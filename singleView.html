@@ -10,14 +10,46 @@
 
 <body>
     <section id="se_mere">
-        <div class="smykke_tekst"></div>
-        <div class="smykke_billede"></div>
-        <div class="tilbage">
-            <div class="pil_tilbage"></div>
+        <div class="smykke_tekst_container">
+            <div class="smykke_tekst"></div>
         </div>
+        <div class="smykke_billede_container">
+            <div class="smykke_billede"></div>
+        </div>
+        <div class="tilbage"></div>
+        <a href="index.html">
+            <div class="pil_tilbage">
+                <img class="hvid_pil" src="pil.svg" alt="">
+            </div>
+        </a>
     </section>
 
-    <script src=""></script>
+    <script>
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/startside/21";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(getJson)
+                visSplash();
+            }
+
+            function visSplash() {
+                console.log(splash)
+
+                document.querySelector(".smykke_billede").style.backgroundImage = "url(" + splash.gul_b3.guid + ")"
+                document.querySelector(".smykke_tekst").innerHTML = splash.citat_singleview
+                document.querySelector(".tilbage").innerHTML = splash.tilbage
+
+            }
+
+            getJson();
+        }
+    </script>
 </body>
 
 </html>

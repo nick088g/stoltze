@@ -17,7 +17,7 @@
 -->
         <nav id="navbar" class="">
             <a href="#">Forside</a>
-            <a href="">Smykker</a>
+            <a href="index.html#gul_kol">Smykker</a>
             <a href="om.html">Om Stoltze</a>
             <a href="kontakt.html">Kontakt</a>
         </nav>
@@ -29,11 +29,14 @@
             </div>
 
             <video autoplay muted loop id="myVideo">
-                <source src="Sequence%2001.mp4">
+                <source src="splash_video.mp4">
             </video>
 
             <div class="menu"></div>
             <div class="burgermenu"></div>
+            <div id="pil_ned" class="pil_ned">
+                <img src="pil_ned.svg" alt="pil ned">
+            </div>
         </section>
 
         <section id="gul_kol">
@@ -100,18 +103,16 @@
                         <img class="hvid_pil" src="pil.svg" alt="">
                     </div>
                 </a>
-
-
                 <div class="pil"></div>
             </div>
         </section>
         <footer>
             <div class="footer_container">
-<div class="footer_1">
-    <p>Nicolette Stoltze Jewellery</p>
-    <br>
-    <h3>Precious passion - crafted with love</h3>
-</div>
+                <div class="footer_1">
+                    <p>Nicolette Stoltze Jewellery</p>
+                    <br>
+                    <h3>Precious passion - crafted with love</h3>
+                </div>
                 <div class="footer_2">Opening Hours</div>
                 <div class="footer_3">+45 25 15 46 75</div>
             </div>
@@ -120,6 +121,8 @@
 
     <script>
         let splash;
+        let splashTwo;
+        let splashThree;
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -158,26 +161,68 @@
             }
 
             getJson();
+            async function getJson2() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/58";
+                let jsonData = await fetch(url);
+                splashTwo = await jsonData.json();
+                console.log(getJson)
+                visÅbningstider();
+            }
+
+            function visÅbningstider() {
+                console.log(splashTwo)
+
+                document.querySelector(".footer_2").innerHTML = splashTwo.content.rendered;
+            }
+            getJson2();
+            async function getJson3() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/59";
+                let jsonData = await fetch(url);
+                splashThree = await jsonData.json();
+                console.log(getJson)
+                visKontakt();
+            }
+
+            function visKontakt() {
+                console.log(splashThree)
+
+                document.querySelector(".footer_3").innerHTML = splashThree.content.rendered;
+            }
+            getJson3();
             scrollLogo();
 
         }
 
         function scrollLogo() {
             window.onscroll = function() {
-                myFunction()
+                myFunction();
             };
 
             function myFunction() {
                 if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
                     document.getElementById("skift").className = '';
                     document.getElementById("stop").className = "logo_hvid";
+                    document.querySelector(".gul_b1").classList.add("slideUp");
                 } else {
                     document.getElementById("skift").className = "logo_sort";
                     document.getElementById("stop").className = "";
+                    document.querySelector(".gul_b1").classList.remove("slideUp");
+                }
+                scrollNav();
+            }
+
+            function scrollNav() {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    document.getElementById("navbar").classList.add("hide");
+                    document.querySelector(".gul_b2").classList.add("slideUp");
+                } else {
+                    document.getElementById("navbar").classList.remove("hide");
+                    document.querySelector(".gul_b2").classList.remove("slideUp");
                 }
 
             }
         }
+
     </script>
 </body>
 

@@ -90,8 +90,6 @@ img {
     left: 25vw
 }
 
-
-
 .groen_b3 {
     position: relative;
     height: 30vw;
@@ -136,6 +134,7 @@ img {
     background-size: cover;
     left: 45vw;
     top: 35vw;
+    opacity: 0;
 
 }
 
@@ -146,6 +145,7 @@ img {
     background-size: cover;
     top: -28vw;
     left: 25vw;
+    opacity: 0;
 }
 
 #myVideo {
@@ -161,6 +161,10 @@ img {
     left: 50%;
 }
 
+#navbar {
+    color: white;
+}
+
 nav {
     position: fixed;
     flex-direction: column;
@@ -168,31 +172,28 @@ nav {
     justify-content: space-around;
     z-index: 2;
 
-    margin-left: vw;
     font-size: 1.12rem;
+    color: black;
 }
 
 a {
-    color: white;
+    color: inherit;
 }
 
 
 nav a {
     display: block;
-    padding: 12px;
+    padding: 40px;
     text-decoration: none;
 
     transform: rotate(-90deg);
-    margin-top: 8vw;
+    margin-top: 6vw;
 }
 
 nav a:hover {
     cursor: pointer;
     animation: drej 0.1s linear forwards;
-}
-
-nav.scroll {
-    background-color: black;
+    color: white;
 }
 
 
@@ -245,12 +246,20 @@ nav.scroll {
     left: 31vw;
 }
 
+/*------------------footer----------------*/
+
 .footer_container {
     display: flex;
     background-color: darkgrey;
     height: 12vw;
 
-    text-align: center;
+    padding-left: 5vw;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    /*            text-align: center;*/
 }
 
 .footer_1,
@@ -261,6 +270,11 @@ nav.scroll {
 
     padding-top: 3vw;
 }
+
+.footer_3 img {
+    width: 2vw;
+}
+
 
 /*---------kontakt-siden----------*/
 
@@ -413,6 +427,18 @@ kontakt_container {
     text-decoration: underline;
 }
 
+.kontakt_info_container2 img {
+    width: 2vw;
+
+}
+
+.kontakt_info_container2 figure {
+    width: 2vw;
+
+}
+
+/*------------------kontakt-Nyhedsbrev elementer-----------------*/
+
 .kontakt_info_container3 {
     /*    background-color: red;*/
     padding: 2vw 2vw 2vw 2vw;
@@ -459,11 +485,10 @@ input[type=submit] {
     width: 3vw;
 }
 
-/*om os siden*/
+/*-----------------om os siden---------------------*/
 
 om_container {
     display: block;
-
 }
 
 .splash_billede_om {
@@ -559,7 +584,7 @@ om_container {
 }
 
 .om_info_container p {
-    font-size: 2.5vw;
+    font-size: 1.4vw;
     margin-top: 1.2vw;
 }
 
@@ -774,10 +799,8 @@ om_container {
     }
 }
 
-/*
 .slideUp {
-    animation-name: slideUp 3s linear forwards;
-    visibility: visible;
+    animation: slideUp 1s linear forwards;
 }
 
 @keyframes slideUp {
@@ -792,6 +815,7 @@ om_container {
     }
 }
 
+/*
 .path {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
@@ -875,6 +899,47 @@ om_container {
 
     bottom: 3.5vw;
     left: 2vw;
+}
 
+.hvid_pil_tilbage {
     transform: scaleX(-1);
+}
+
+.pil_tilbage:hover {
+    animation: pil_tilbage 0.1s linear forwards;
+    transform: scaleX(-1);
+}
+
+@keyframes pil_tilbage {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-1.3vw);
+    }
+}
+
+.pil_ned {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+
+    bottom: 0vw;
+    left: 47.5vw;
+    animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }

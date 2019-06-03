@@ -189,40 +189,133 @@
                 document.querySelector(".footer_3").innerHTML = splashThree.content.rendered;
             }
             getJson3();
-            scrollLogo();
+            scrollAnimation();
 
         }
 
-        function scrollLogo() {
+        function scrollAnimation() {
             window.onscroll = function() {
+                console.log(window.scrollY);
+                scrollNav();
+            }
+
+            function scrollNav() {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    document.querySelector(".gul_b2").classList.add("slideUp");
+                } else {
+                    document.querySelector(".gul_b2").classList.remove("slideUp");
+                }
                 myFunction();
-            };
+            }
 
             function myFunction() {
                 if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
                     document.getElementById("skift").className = '';
                     document.getElementById("stop").className = "logo_hvid";
-                    document.querySelector(".gul_b1").classList.add("slideUp");
+
+
                 } else {
                     document.getElementById("skift").className = "logo_sort";
                     document.getElementById("stop").className = "";
+
+
+                }
+                scrollImage();
+            }
+
+            function scrollImage() {
+                if (document.body.scrollTop > 680 || document.documentElement.scrollTop > 680) {
+                    document.querySelector(".gul_b1").classList.add("slideUp");
+                } else {
                     document.querySelector(".gul_b1").classList.remove("slideUp");
                 }
-                scrollNav();
+                scrollCitat();
             }
 
-            function scrollNav() {
-                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                    document.getElementById("navbar").classList.add("hide");
-                    document.querySelector(".gul_b2").classList.add("slideUp");
+            function scrollCitat() {
+                if (document.body.scrollTop > 950 || document.documentElement.scrollTop > 950) {
+                    document.querySelector(".citat_gul").classList.add("slideUp");
                 } else {
-                    document.getElementById("navbar").classList.remove("hide");
-                    document.querySelector(".gul_b2").classList.remove("slideUp");
+                    document.querySelector(".citat_gul").classList.remove("slideUp");
                 }
+                scrollPink();
+            }
 
+            function scrollPink() {
+                if (document.body.scrollTop > 1816 || document.documentElement.scrollTop > 1816) {
+                    document.querySelector(".pink_b1").classList.add("slideUp");
+                    document.querySelector(".pink_b2").classList.add("slideUp");
+                } else {
+                    document.querySelector(".pink_b1").classList.remove("slideUp");
+                    document.querySelector(".pink_b2").classList.remove("slideUp");
+                }
+                scrollPink2();
+            }
+
+            function scrollPink2() {
+                if (document.body.scrollTop > 2280 || document.documentElement.scrollTop > 2280) {
+                    document.querySelector(".pink_b3").classList.add("slideUp");
+                } else {
+                    document.querySelector(".pink_b3").classList.remove("slideUp");
+                }
+                scrollBlaa1();
+            }
+
+            function scrollBlaa1() {
+                if (document.body.scrollTop > 3180 || document.documentElement.scrollTop > 3180) {
+                    document.querySelector(".blaa_b2").classList.add("slideUp");
+                } else {
+                    document.querySelector(".blaa_b2").classList.remove("slideUp");
+                }
+                scrollBlaa2();
+            }
+
+            function scrollBlaa2() {
+                if (document.body.scrollTop > 3380 || document.documentElement.scrollTop > 3380) {
+                    document.querySelector(".blaa_b1").classList.add("slideUp");
+                } else {
+                    document.querySelector(".blaa_b1").classList.remove("slideUp");
+                }
+                scrollBlaa3();
+            }
+
+            function scrollBlaa3() {
+                if (document.body.scrollTop > 3890 || document.documentElement.scrollTop > 3890) {
+                    document.querySelector(".blaa_b3").classList.add("slideUp");
+                } else {
+                    document.querySelector(".blaa_b3").classList.remove("slideUp");
+                }
+                scrollGroen1();
+            }
+
+            function scrollGroen1() {
+                if (document.body.scrollTop > 4567 || document.documentElement.scrollTop > 4567) {
+                    document.querySelector(".groen_b3").classList.add("slideUp");
+                    document.querySelector(".citat_groen").classList.add("slideUp");
+                } else {
+                    document.querySelector(".groen_b3").classList.remove("slideUp");
+                    document.querySelector(".citat_groen").classList.remove("slideUp");
+                }
+                scrollGroen2();
+            }
+
+            function scrollGroen2() {
+                if (document.body.scrollTop > 4700 || document.documentElement.scrollTop > 4700) {
+                    document.querySelector(".groen_b1").classList.add("slideUp");
+                } else {
+                    document.querySelector(".groen_b1").classList.remove("slideUp");
+                }
+                scrollGroen3();
+            }
+
+            function scrollGroen3() {
+                if (document.body.scrollTop > 5160 || document.documentElement.scrollTop > 5160) {
+                    document.querySelector(".groen_b2").classList.add("slideUp");
+                } else {
+                    document.querySelector(".groen_b2").classList.remove("slideUp");
+                }
             }
         }
-
     </script>
 </body>
 

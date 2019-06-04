@@ -12,19 +12,19 @@
     <section id="se_mere">
         <div class="smykke_tekst_container">
             <div class="smykke_tekst"></div>
+            <div class="tilbage"></div>
+            <a href="index.html">
+                <div class="pil_tilbage">
+                    <img class="hvid_pil_tilbage" src="pil.svg" alt="pil gå tilbage">
+                </div>
+            </a>
         </div>
         <div class="smykke_billede_container">
             <div class="smykke_billede"></div>
         </div>
-        <div class="tilbage"></div>
-        <a href="index.html">
-            <div class="pil_tilbage">
-                <img class="hvid_pil_tilbage" src="pil.svg" alt="">
-            </div>
-        </a>
     </section>
     <div id="singleview_b_container">
-        <div class="singleview_b1"></div>
+        <div class="singleview_b1"> </div>
         <div class="singleview_b2"></div>
         <div class="singleview_b3"></div>
     </div>
@@ -49,10 +49,28 @@
                 document.querySelector(".smykke_billede").style.backgroundImage = "url(" + splash.gul_b3.guid + ")"
                 document.querySelector(".smykke_tekst").innerHTML = splash.citat_singleview
                 document.querySelector(".tilbage").innerHTML = splash.tilbage
-
             }
 
             getJson();
+            async function getJson2() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/singleview/98";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(getJson)
+                visSingleview();
+            }
+
+            function visSingleview() {
+                console.log(splash)
+
+                document.querySelector(".singleview_b1").style.backgroundImage = "url(" + splash.gul_b1_single.guid + ")"
+                document.querySelector(".singleview_b2").style.backgroundImage = "url(" + splash.gul_b2_single.guid + ")"
+                document.querySelector(".singleview_b3").style.backgroundImage = "url(" + splash.gul_b3_single.guid + ")"
+
+            }
+
+            getJson2();
+
         }
     </script>
 </body>

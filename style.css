@@ -398,8 +398,14 @@ img {
     justify-content: space-between;
     z-index: 2;
 
-    font-size: 1.12rem;
+    font-size: 1.2rem;
     color: black;
+
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin-top: -1.5vw;
 }
 
 a {
@@ -419,6 +425,86 @@ a {
 #navbar a:hover {
     cursor: pointer;
     animation: drej 0.1s linear forwards;
+}
+
+/*------------burgermenu------------*/
+@media only screen and (max-width:820px) {
+
+    .hide {
+        display: none;
+    }
+
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        /*De 3 linjer til burgermenuen bliver her defineret*/
+        display: flex;
+        flex-wrap: wrap;
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        transition: 0.4s;
+
+    }
+
+    .change .bar1 {
+        /*Her roterer vi linje1 og flytter den med translate */
+        transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+
+    .change .bar2 {
+        /*linje 2 bliver gennemsigtig */
+        opacity: 0;
+    }
+
+
+    .change .bar3 {
+        /*Her roterer vi linje3 og flytter den med translate */
+        transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .box {
+        /*Boksen som linksene ligger i */
+        height: 57.3vw;
+        width: auto;
+        background-color: rgba(222, 217, 213, 0.97);
+        z-index: 1;
+
+
+        position: fixed;
+        margin: 12vw 0vw 0vw 5vw;
+        border-radius: 2vw;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    .burgermenu {
+        position: fixed;
+        z-index: 2;
+
+        right: 4vw;
+        top: 4vw;
+    }
+
+    #navbar a {
+        display: block;
+        padding: 40px;
+        text-decoration: none;
+
+        margin-top: 3.5vw;
+        transform: rotate(0deg);
+    }
+
 }
 
 /*------------------footer----------------*/
@@ -627,6 +713,8 @@ kontakt_container {
 
     color: black;
     font-style: italic;
+
+    overflow: inherit;
 }
 
 input[type=text] {
@@ -649,15 +737,22 @@ input[type=submit] {
 
 /*-----------------om os siden---------------------*/
 
-om_container {
+/*
+.om_container {
+    display: flex;
+}
+*/
+
+.splash_billede_container {
     display: block;
+
 }
 
 .splash_billede_om {
     flex-basis: 200px;
     flex-grow: 1;
 
-    height: 65vw;
+    height: 66vw;
     width: 70vw;
 
     top: -12.8vw;
@@ -1055,7 +1150,6 @@ kob_container {
     bottom: 8.5vw;
     left: 60vw;
 }
-
 #stop {
     left: 31vw;
 }
@@ -1130,7 +1224,7 @@ kob_container {
 
     cursor: default;
 
-    position: absolute;
+    position: relative;
 
     left: 8vw;
     top: 33vw;
@@ -1141,13 +1235,15 @@ kob_container {
 }
 
 .pil_tilbage {
-    position: absolute;
+    position: relative;
 
     height: 4vw;
     width: 20vw;
 
-    top: 35vw;
+
+    top: 30.5vw;
     left: 0vw;
+
 }
 
 .hvid_pil_tilbage {
@@ -1164,27 +1260,27 @@ kob_container {
 
     flex-direction: row;
 
-    /*
-    flex-basis: 200px;
-    flex-grow: 1;
-*/
-
     height: 50vh;
     width: 100vw;
 }
 
 .singleview_b1 {
-    background-color: beige;
 
     flex-basis: 200px;
     flex-grow: 1;
+
+    background-size: cover;
+
+    margin: 2vw;
 }
 
 .singleview_b2 {
-    background-color: bisque;
-
     flex-basis: 200px;
     flex-grow: 1;
+
+    background-size: cover;
+
+    margin: 2vw;
 }
 
 
@@ -1192,7 +1288,9 @@ kob_container {
     flex-basis: 200px;
     flex-grow: 1;
 
-    background-color: aqua;
+    background-size: cover;
+
+    margin: 2vw;
 }
 
 .pil_ned {
@@ -1243,7 +1341,7 @@ kob_container {
 }
 
 .slideUp {
-    animation: slideUp 1s linear forwards;
+    animation: slideUp 0.6s linear forwards;
 }
 
 @keyframes slideUp {
@@ -1267,6 +1365,6 @@ kob_container {
 
     100% {
         transform: rotate(0deg);
-        transform: translateX(1.3vw);
+        transform: translateX(2.8vw);
     }
 }

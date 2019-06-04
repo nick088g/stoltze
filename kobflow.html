@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolette Stoltze - Kontakt</title>
+    <title>Nicolette Stoltze - Købsflow</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,41 +13,30 @@
         <nav id="navbar" class="">
             <a href="index.html">Forside</a>
             <a href="index.html#gul_kol">Lookbook</a>
-            <a href="om.html">Om Stoltze</a>
-            <a href="#">Kontakt</a>
+            <a href="">Om Stoltze</a>
+            <a href="kontakt.html">Kontakt</a>
             <a href="kobflow.html">Køb Smykke</a>
         </nav>
 
-        <section class="kontakt_container">
-            <div class="splash_billede"></div>
-            <div class="bar">
-                <img class="kontakt_logo" src="kontakt.svg" alt="">
-                <img class="kontakt_linje" src="kontakt_linje.svg" alt="">
-                <div class="info_butikker"></div>
-                <img class="kontakt_linje2" src="kontakt_linje.svg" alt="">
+        <section class="kob_container">
+            <div class="splash_billede_kob"></div>
+            <div class="kob_bar">
+                <img class="kob_logo" src="kob.svg" alt="">
+                <img class="kob_linje" src="kontakt_linje.svg" alt="">
             </div>
-            <div class="logo">
-                <img src="stoltze_logo_hvid.svg" alt="">
+            <div class="kob_logo_stoltze">
+                <img src="smykker.svg" alt="">
             </div>
-            <div class="kontakt_info_container"></div>
-            <div class="kontakt_info_container2"></div>
-            <div class="kontakt_info_container3">
-                <form>
-                    <label for="lname">Nyhedsbrev</label>
-                    <input type="text" id="fname" name="fname" placeholder="Navn">
-                    <input type="text" id="lname" name="lname" placeholder="Email">
-                    <input type="submit" value="Tilmeld mig">
-                </form>
+            <div class="kob_info_container"></div>
+            <div class="kob_info_container2">
+                <div class="video_container">
+                </div>
             </div>
         </section>
 
         <footer>
             <div class="footer_container">
-                <div class="footer_1">
-                    <p>Nicolette Stoltze Jewellery</p>
-                    <br>
-                    <h3>Precious passion - crafted with love</h3>
-                </div>
+                <div class="footer_1"></div>
                 <div class="footer_2">Opening Hours</div>
                 <div class="footer_3">+45 25 15 46 75</div>
             </div>
@@ -57,11 +46,13 @@
         let splash;
         let splashTwo;
         let splashThree;
+        let splashFour;
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
+
             async function getJson() {
-                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/49";
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/om/53";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(getJson)
@@ -71,9 +62,13 @@
             function visSplash() {
                 console.log(splash)
 
-                document.querySelector(".splash_billede").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
-                document.querySelector(".info_butikker").innerHTML = splash.content.rendered;
+                document.querySelector(".splash_billede_om").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
+                document.querySelector(".om_info_container").innerHTML = splash.content.rendered;
+                document.querySelector(".video_container").style.backgroundImage = "url(" + splash.om_video.guid + ")"
+                document.querySelector(".portrait").style.backgroundImage = "url(" + splash.portrait.guid + ")"
+
             }
+
             getJson();
             async function getJson2() {
                 let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/58";
@@ -86,7 +81,6 @@
             function visÅbningstider() {
                 console.log(splashTwo)
 
-                document.querySelector(".kontakt_info_container").innerHTML = splashTwo.content.rendered;
                 document.querySelector(".footer_2").innerHTML = splashTwo.content.rendered;
             }
             getJson2();
@@ -101,10 +95,24 @@
             function visKontakt() {
                 console.log(splashThree)
 
-                document.querySelector(".kontakt_info_container2").innerHTML = splashThree.content.rendered;
                 document.querySelector(".footer_3").innerHTML = splashThree.content.rendered;
             }
             getJson3();
+            async function getJson4() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/68";
+                let jsonData = await fetch(url);
+                splashFour = await jsonData.json();
+                console.log(getJson)
+                visKontakt();
+            }
+
+            function visKontakt() {
+                console.log(splashThree)
+
+                document.querySelector(".footer_1").innerHTML = splashFour.content.rendered;
+            }
+            getJson4();
+
         }
 
     </script>

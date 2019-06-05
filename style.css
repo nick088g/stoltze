@@ -1551,7 +1551,7 @@ p {
 
 .se_mere {
     width: 20vw;
-    height: 2vw;
+    height: 4vw;
     font-size: 2.8rem;
 
     position: relative;
@@ -1571,7 +1571,7 @@ p {
     width: 20vw;
 
     top: 76.5vw;
-    right: 24vw;
+    right: 18vw;
 }
 
 .se_mere_pink {
@@ -1598,7 +1598,7 @@ p {
     width: 20vw;
 
     bottom: 2vw;
-    left: 60vw;
+    right: 16vw;
 }
 
 .se_mere_blaa {
@@ -1625,7 +1625,7 @@ p {
     width: 20vw;
 
     bottom: 2vw;
-    left: 60vw;
+    right: 16vw;
 }
 
 .se_mere_pil:hover,
@@ -1664,7 +1664,7 @@ p {
     width: 20vw;
 
     bottom: 8.5vw;
-    left: 60vw;
+    right: 19vw;
 }
 
 #stop {
@@ -1742,7 +1742,7 @@ p {
 
     position: relative;
 
-    left: 8vw;
+    left: 6vw;
     top: 63vh;
 
     color: white;
@@ -1758,14 +1758,12 @@ p {
 
 
     top: 30.5vw;
-    left: 0vw;
+    left: 2vw;
 
 }
 
 .hvid_pil_tilbage {
     transform: scaleX(-1);
-
-    position: absolute;
 }
 
 .pil_tilbage:hover {

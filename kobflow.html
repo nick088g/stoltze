@@ -13,9 +13,9 @@
         <nav id="navbar" class="">
             <a href="index.html">Forside</a>
             <a href="index.html#gul_kol">Lookbook</a>
+            <a href="kobflow.html">Køb Smykker</a>
             <a href="">Om Stoltze</a>
             <a href="kontakt.html">Kontakt</a>
-            <a href="kobflow.html">Køb Smykke</a>
         </nav>
 
         <section class="kob_container">
@@ -29,8 +29,10 @@
             </div>
             <div class="kob_info_container"></div>
             <div class="kob_info_container2">
-                <div class="video_container">
-                </div>
+                <div class="billede_1"></div>
+            </div>
+            <div class="kob_info_container3">
+                <div class="billede_2"></div>
             </div>
         </section>
 
@@ -52,7 +54,7 @@
         function start() {
 
             async function getJson() {
-                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/om/53";
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kob_smykker/111";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(getJson)
@@ -62,10 +64,12 @@
             function visSplash() {
                 console.log(splash)
 
-                document.querySelector(".splash_billede_om").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
-                document.querySelector(".om_info_container").innerHTML = splash.content.rendered;
-                document.querySelector(".video_container").style.backgroundImage = "url(" + splash.om_video.guid + ")"
-                document.querySelector(".portrait").style.backgroundImage = "url(" + splash.portrait.guid + ")"
+                document.querySelector(".splash_billede_kob").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
+                document.querySelector(".kob_info_container").innerHTML = splash.content.rendered;
+                document.querySelector(".billede_1").style.backgroundImage = "url(" + splash.billede_1.guid + ")"
+                document.querySelector(".billede_2").style.backgroundImage = "url(" + splash.billede_2.guid + ")"
+
+
 
             }
 
@@ -114,7 +118,6 @@
             getJson4();
 
         }
-
     </script>
 </body>
 

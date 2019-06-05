@@ -10,13 +10,15 @@
 
 <body>
     <section>
-        <nav id="navbar" class="">
-            <a href="index.html">Forside</a>
-            <a href="index.html#gul_kol">Lookbook</a>
-            <a href="">Om Stoltze</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="kobflow.html">Køb Smykke</a>
-        </nav>
+        <!--
+<nav id="navbar" class="">
+    <a href="index.html">Forside</a>
+    <a href="index.html#gul_kol">Lookbook</a>
+    <a href="kobflow.html">Køb Smykker</a>
+    <a href="">Om Stoltze</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>
+-->
 
         <section class="om_container">
             <div class="splash_billede_container">
@@ -30,20 +32,24 @@
             <div class="om_logo_stoltze">
                 <img src="stoltze_logo_hvid.svg" alt="">
             </div>
-            <div class="om_info_container"></div>
+            <div class="om_info_container">
+                <div class="om_info_indhold"></div>
+            </div>
             <div class="om_info_container2">
                 <div class="video_container">
                 </div>
             </div>
         </section>
 
-        <footer>
-            <div class="footer_container">
-                <div class="footer_1"></div>
-                <div class="footer_2">Opening Hours</div>
-                <div class="footer_3">+45 25 15 46 75</div>
-            </div>
-        </footer>
+        <!--
+<footer>
+    <div class="footer_container">
+        <div class="footer_1"></div>
+        <div class="footer_2">Opening Hours</div>
+        <div class="footer_3">+45 25 15 46 75</div>
+    </div>
+</footer>
+-->
     </section>
     <script>
         let splash;
@@ -66,7 +72,7 @@
                 console.log(splash)
 
                 document.querySelector(".splash_billede_om").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
-                document.querySelector(".om_info_container").innerHTML = splash.content.rendered;
+                document.querySelector(".om_info_indhold").innerHTML = splash.content.rendered;
                 document.querySelector(".video_container").style.backgroundImage = "url(" + splash.om_video.guid + ")"
                 document.querySelector(".portrait").style.backgroundImage = "url(" + splash.portrait.guid + ")"
 
@@ -117,7 +123,6 @@
             getJson4();
 
         }
-
     </script>
 </body>
 

@@ -10,27 +10,39 @@
 
 <body>
     <section>
+        <!--
         <nav id="navbar" class="">
             <a href="index.html">Forside</a>
             <a href="index.html#gul_kol">Lookbook</a>
+            <a href="kobflow.html">Køb Smykker</a>
             <a href="om.html">Om Stoltze</a>
             <a href="#">Kontakt</a>
-            <a href="kobflow.html">Køb Smykke</a>
         </nav>
+-->
 
         <section class="kontakt_container">
-            <div class="splash_billede"></div>
-            <div class="bar">
+            <div class="splash_billede_container">
+                <div class="splash_billede"></div>
+            </div>
+
+            <div class="kontakt_bar">
+
                 <img class="kontakt_logo" src="kontakt.svg" alt="">
                 <img class="kontakt_linje" src="kontakt_linje.svg" alt="">
                 <div class="info_butikker"></div>
                 <img class="kontakt_linje2" src="kontakt_linje.svg" alt="">
+
             </div>
-            <div class="logo">
+            <div class="kontakt_logo_stoltze">
                 <img src="stoltze_logo_hvid.svg" alt="">
             </div>
-            <div class="kontakt_info_container"></div>
-            <div class="kontakt_info_container2"></div>
+
+            <div class="kontakt_info_container1">
+                <div class="kontakt_info_indhold1"></div>
+            </div>
+            <div class="kontakt_info_container2">
+                <div class="kontakt_info_indhold2"></div>
+            </div>
             <div class="kontakt_info_container3">
                 <form>
                     <label for="lname">Nyhedsbrev</label>
@@ -41,17 +53,19 @@
             </div>
         </section>
 
-        <footer>
-            <div class="footer_container">
-                <div class="footer_1">
-                    <p>Nicolette Stoltze Jewellery</p>
-                    <br>
-                    <h3>Precious passion - crafted with love</h3>
-                </div>
-                <div class="footer_2">Opening Hours</div>
-                <div class="footer_3">+45 25 15 46 75</div>
-            </div>
-        </footer>
+        <!--
+<footer>
+    <div class="footer_container">
+        <div class="footer_1">
+            <p>Nicolette Stoltze Jewellery</p>
+            <br>
+            <h3>Precious passion - crafted with love</h3>
+        </div>
+        <div class="footer_2">Opening Hours</div>
+        <div class="footer_3">+45 25 15 46 75</div>
+    </div>
+</footer>
+-->
     </section>
     <script>
         let splash;
@@ -86,7 +100,7 @@
             function visÅbningstider() {
                 console.log(splashTwo)
 
-                document.querySelector(".kontakt_info_container").innerHTML = splashTwo.content.rendered;
+                document.querySelector(".kontakt_info_indhold1").innerHTML = splashTwo.content.rendered;
                 document.querySelector(".footer_2").innerHTML = splashTwo.content.rendered;
             }
             getJson2();
@@ -101,12 +115,11 @@
             function visKontakt() {
                 console.log(splashThree)
 
-                document.querySelector(".kontakt_info_container2").innerHTML = splashThree.content.rendered;
+                document.querySelector(".kontakt_info_indhold2").innerHTML = splashThree.content.rendered;
                 document.querySelector(".footer_3").innerHTML = splashThree.content.rendered;
             }
             getJson3();
         }
-
     </script>
 </body>
 

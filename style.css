@@ -10,6 +10,12 @@ img {
     width: 100%;
 }
 
+p {
+    font-family: athelas, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 #startside {
     display: flex;
 }
@@ -17,7 +23,6 @@ img {
 #myVideo {
     min-width: 100%;
     min-height: 100%;
-
 
     background-size: cover;
 
@@ -1230,138 +1235,281 @@ img {
 
 /*---------------kob smykker flow side---------------*/
 
-kob_container {
-    display: block;
+@media only screen and (max-width: 700px) {
+
+    kob_container {
+        display: block;
+    }
+
+    .splash_billede_kob {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        height: 53vw;
+        width: 70vw;
+
+        top: -10vw;
+        right: 0vw;
+
+        position: absolute;
+        background-size: cover;
+    }
+
+    .kob_bar {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        position: relative;
+
+        background-color: #D1DAE6;
+
+        height: 100vw;
+        width: 32vw;
+        flex-direction: column;
+    }
+
+    .kob_logo_stoltze {
+        position: absolute;
+
+        height: auto;
+        width: 35vw;
+
+        top: 18.7vw;
+        left: 14vw;
+
+        transform: rotate(90deg);
+    }
+
+    .kob_logo {
+        position: absolute;
+
+        height: 3.5vw;
+        width: auto;
+
+        top: 1vw;
+        left: 20vw;
+    }
+
+    .kob_linje {
+        position: absolute;
+
+        height: 32vw;
+        width: auto;
+
+        left: 18vw;
+        top: 4.2vw;
+
+        transform: rotate(180deg);
+        transform: scaleY(-1);
+    }
+
+    .kob_info_container {
+        padding: 4vw 4vw 4vw 6vw;
+
+        width: 68vw;
+        height: 25vw;
+
+        position: absolute;
+        left: 32vw;
+        top: 43vw;
+
+        color: black;
+
+    }
+
+    .kob_info_container p {
+        font-size: 1.4vw;
+        margin-top: 1.2vw;
+    }
+
+    .kob_info_container h2 {
+        font-size: 2.8vw;
+    }
+
+    .kob_info_container h4 {
+        font-size: 1vw;
+        margin-left: 37vw;
+    }
+
+    .kob_info_container2 {
+        padding: 0vw;
+        padding-left: 6vw;
+
+        width: 34vw;
+        height: 35vw;
+
+        position: absolute;
+        left: 32vw;
+        top: 68vw;
+    }
+
+    .kob_info_container3 {
+        padding: 0vw;
+        padding-left: 6vw;
+
+        width: 34vw;
+        height: 35vw;
+
+        position: absolute;
+        left: 66vw;
+        top: 68vw;
+    }
+
+    .billede_1 {
+        width: 25vw;
+        height: 30vw;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .billede_2 {
+        width: 25vw;
+        height: 30vw;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
 }
 
-.splash_billede_kob {
-    flex-basis: 200px;
-    flex-grow: 1;
+@media only screen and (min-width: 700px) {
 
-    height: 53vw;
-    width: 70vw;
+    kob_container {
+        display: block;
+    }
 
-    top: -10vw;
-    right: 0vw;
+    .splash_billede_kob {
+        flex-basis: 200px;
+        flex-grow: 1;
 
-    position: absolute;
-    background-size: cover;
-}
+        height: 53vw;
+        width: 70vw;
 
-.kob_bar {
-    flex-basis: 200px;
-    flex-grow: 1;
+        top: -10vw;
+        right: 0vw;
 
-    position: relative;
+        position: absolute;
+        background-size: cover;
+    }
 
-    background-color: #D1DAE6;
+    .kob_bar {
+        flex-basis: 200px;
+        flex-grow: 1;
 
-    height: 100vw;
-    width: 32vw;
-    flex-direction: column;
-}
+        position: relative;
 
-.kob_logo_stoltze {
-    position: absolute;
+        background-color: #D1DAE6;
 
-    height: auto;
-    width: 35vw;
+        height: 100vw;
+        width: 32vw;
+        flex-direction: column;
+    }
 
-    top: 18.7vw;
-    left: 14vw;
+    .kob_logo_stoltze {
+        position: absolute;
 
-    transform: rotate(90deg);
-}
+        height: auto;
+        width: 35vw;
 
-.kob_logo {
-    position: absolute;
+        top: 18.7vw;
+        left: 14vw;
 
-    height: 3.5vw;
-    width: auto;
+        transform: rotate(90deg);
+    }
 
-    top: 1vw;
-    left: 20vw;
-}
+    .kob_logo {
+        position: absolute;
 
-.kob_linje {
-    position: absolute;
+        height: 3.5vw;
+        width: auto;
 
-    height: 32vw;
-    width: auto;
+        top: 1vw;
+        left: 20vw;
+    }
 
-    left: 18vw;
-    top: 4.2vw;
+    .kob_linje {
+        position: absolute;
 
-    transform: rotate(180deg);
-    transform: scaleY(-1);
-}
+        height: 32vw;
+        width: auto;
 
-.kob_info_container {
-    padding: 4vw 4vw 4vw 6vw;
+        left: 18vw;
+        top: 4.2vw;
 
-    width: 68vw;
-    height: 25vw;
+        transform: rotate(180deg);
+        transform: scaleY(-1);
+    }
 
-    position: absolute;
-    left: 32vw;
-    top: 43vw;
+    .kob_info_container {
+        padding: 4vw 4vw 4vw 6vw;
 
-    color: black;
+        width: 68vw;
+        height: 25vw;
 
-}
+        position: absolute;
+        left: 32vw;
+        top: 43vw;
 
-.kob_info_container p {
-    font-size: 1.4vw;
-    margin-top: 1.2vw;
-}
+        color: black;
 
-.kob_info_container h2 {
-    font-size: 2.8vw;
-}
+    }
 
-.kob_info_container h4 {
-    font-size: 1vw;
-    margin-left: 37vw;
-}
+    .kob_info_container p {
+        font-size: 1.4vw;
+        margin-top: 1.2vw;
+    }
 
-.kob_info_container2 {
-    padding: 0vw;
-    padding-left: 6vw;
+    .kob_info_container h2 {
+        font-size: 2.8vw;
+    }
 
-    width: 34vw;
-    height: 35vw;
+    .kob_info_container h4 {
+        font-size: 1vw;
+        margin-left: 37vw;
+    }
 
-    position: absolute;
-    left: 32vw;
-    top: 68vw;
-}
+    .kob_info_container2 {
+        padding: 0vw;
+        padding-left: 6vw;
 
-.kob_info_container3 {
-    padding: 0vw;
-    padding-left: 6vw;
+        width: 34vw;
+        height: 35vw;
 
-    width: 34vw;
-    height: 35vw;
+        position: absolute;
+        left: 32vw;
+        top: 68vw;
+    }
 
-    position: absolute;
-    left: 66vw;
-    top: 68vw;
-}
+    .kob_info_container3 {
+        padding: 0vw;
+        padding-left: 6vw;
 
-.billede_1 {
-    width: 25vw;
-    height: 30vw;
+        width: 34vw;
+        height: 35vw;
 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+        position: absolute;
+        left: 66vw;
+        top: 68vw;
+    }
 
-.billede_2 {
-    width: 25vw;
-    height: 30vw;
+    .billede_1 {
+        width: 25vw;
+        height: 30vw;
 
-    background-size: contain;
-    background-repeat: no-repeat;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .billede_2 {
+        width: 25vw;
+        height: 30vw;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
 
 }
 
@@ -1737,4 +1885,78 @@ kob_container {
         transform: rotate(0deg);
         transform: translateX(2.8vw);
     }
+}
+
+/*---------Load animation----------*/
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+    height: 100vh;
+    display: table;
+
+}
+
+#wrapper {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+
+}
+
+.text {
+    position: fixed;
+    top: 32%;
+    left: 19.5%;
+    width: 60%;
+    font-size: 9.1rem;
+}
+
+line {
+    stroke: #fff;
+    fill: #fff;
+    stroke-dasharray: 300;
+    opacity: 10;
+    animation: animate 5s;
+
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 300;
+    }
+
+    30% {
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 300;
+    }
+
+    90% {
+        fill: rgba (255, 255, 255, 0);
+    }
+
+    100% {
+        opacity: 10;
+        fill: rgba (255, 255, 255, 1);
+        stroke-dashoffset: 0;
+
+    }
+}
+
+#forside {
+    display: none;
 }

@@ -4,6 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <title>Nicolette Stoltze - Om Stoltze</title>
     <link rel="stylesheet" href="https://use.typekit.net/mdl2npy.css">
     <link rel="stylesheet" href="https://use.typekit.net/dsa5gqh.css">
@@ -49,6 +56,7 @@
             </div>
             <div class="om_info_container2">
                 <div class="video_container">
+                    <iframe src="https://www.youtube.com/embed/6HadWxg-xvQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -83,7 +91,6 @@
 
                 document.querySelector(".splash_billede_om").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
                 document.querySelector(".om_info_indhold").innerHTML = splash.content.rendered;
-                document.querySelector(".video_container").style.backgroundImage = "url(" + splash.om_video.guid + ")"
                 document.querySelector(".portrait").style.backgroundImage = "url(" + splash.portrait.guid + ")"
 
             }

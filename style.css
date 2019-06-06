@@ -1545,18 +1545,20 @@ p {
         position: absolute;
         left: 32vw;
         top: 76vw;
+
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .video_container {
-        display: block;
-        background-size: contain;
-        background-repeat: no-repeat;
+        flex-basis: 200px;
+        flex-grow: 1;
 
-        height: 48vh;
-        width: 44.7vw;
+    }
 
-        margin-left: 10vw;
-        cursor: pointer;
+    iframe {
+        height: 100%;
+        width: 100%;
     }
 
 }

@@ -165,13 +165,9 @@
 
         <footer>
             <div class="footer_container">
-                <div class="footer_1">
-                    <p>Nicolette Stoltze Jewellery</p>
-                    <br>
-                    <h3>Precious passion - crafted with love</h3>
-                </div>
-                <div class="footer_2">Opening Hours</div>
-                <div class="footer_3">+45 25 15 46 75</div>
+                <div class="footer_1"></div>
+                <div class="footer_2"></div>
+                <div class="footer_3"></div>
             </div>
         </footer>
     </div>
@@ -180,6 +176,7 @@
         let splash;
         let splashTwo;
         let splashThree;
+        let splashFour;
         document.addEventListener("DOMContentLoaded", start);
 
         var myVar;
@@ -233,9 +230,23 @@
 
             getJson();
             async function getJson2() {
-                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/58";
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/68";
                 let jsonData = await fetch(url);
                 splashTwo = await jsonData.json();
+                console.log(getJson)
+                visInformation();
+            }
+
+            function visInformation() {
+                console.log(splashFour)
+
+                document.querySelector(".footer_1").innerHTML = splashTwo.content.rendered;
+            }
+            getJson2();
+            async function getJson3() {
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/58";
+                let jsonData = await fetch(url);
+                splashThree = await jsonData.json();
                 console.log(getJson)
                 visÅbningstider();
             }
@@ -243,13 +254,13 @@
             function visÅbningstider() {
                 console.log(splashTwo)
 
-                document.querySelector(".footer_2").innerHTML = splashTwo.content.rendered;
+                document.querySelector(".footer_2").innerHTML = splashThree.content.rendered;
             }
-            getJson2();
-            async function getJson3() {
+            getJson3();
+            async function getJson4() {
                 let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/kontakt/59";
                 let jsonData = await fetch(url);
-                splashThree = await jsonData.json();
+                splashFour = await jsonData.json();
                 console.log(getJson)
                 visKontakt();
             }
@@ -257,9 +268,9 @@
             function visKontakt() {
                 console.log(splashThree)
 
-                document.querySelector(".footer_3").innerHTML = splashThree.content.rendered;
+                document.querySelector(".footer_3").innerHTML = splashFour.content.rendered;
             }
-            getJson3();
+            getJson4();
             scrollAnimation();
         }
 

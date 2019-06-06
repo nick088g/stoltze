@@ -236,7 +236,7 @@ p {
     }
 
     .se_mere {
-        width: 20vw;
+        width: 26vw;
         height: 4vw;
         font-size: 2.8rem;
 
@@ -369,7 +369,7 @@ p {
         background-size: cover;
 
         margin-left: 10vw;
-        margin-top: 5vh;
+        margin-top: 12vh;
 
     }
 
@@ -499,22 +499,6 @@ p {
         font-size: 7vw;
         padding: 2vw 2vw 20vw 2vw;
 
-        /*
-        width: 60vw;
-        height: 50vw;
-        font-size: 7vw;;
-
-        position: absolute;
-
-        left: 24vw;
-        bottom: 18vw;
-
-
-        color: white;
-        font-style: italic;
-        cursor: default;
-*/
-
     }
 
 
@@ -525,31 +509,16 @@ p {
         cursor: default;
         font-size: 7vw;
         padding: 2vw 2vw 2vw 2vw;
-        /*
-        width: 32vw;
-        height: 20vw;
-        font-size: 3rem;
-
-        position: absolute;
-        left: 53vw;
-        top: 10vw;
-
-        color: white;
-        font-style: italic;
-
-        opacity: 0;
-        cursor: default;
-*/
     }
 
     .se_mere {
-        width: 40vw;
+        width: 46vw;
         height: 15vw;
         font-size: 2.8rem;
 
         position: absolute;
         left: 53vw;
-        bottom: -85vh;
+        bottom: -92vh;
 
         color: white;
         font-style: italic;
@@ -559,14 +528,14 @@ p {
         position: absolute;
 
         height: 5vh;
-        width: 40vw;
+        width: 45vw;
 
-        top: 182.5vh;
+        top: 190.5vh;
         right: 0vw;
     }
 
     .se_mere_pink {
-        width: 40vw;
+        width: 46vw;
         height: 15vw;
         font-size: 2.8rem;
 
@@ -593,7 +562,7 @@ p {
     }
 
     .se_mere_blaa {
-        width: 40vw;
+        width: 46vw;
         height: 15vw;
         font-size: 2.8rem;
 
@@ -629,7 +598,7 @@ p {
 
 
     .se_mere_groen {
-        width: 40vw;
+        width: 46vw;
         height: 15vw;
         font-size: 2.8rem;
 
@@ -676,7 +645,7 @@ p {
     font-weight: 400;
     font-style: normal;
 
-    margin-top: -3vw;
+    margin-top: -2.4vw;
 
 }
 
@@ -1848,19 +1817,47 @@ p {
     animation: stoltze_logo_sort 1s linear forwards;
 }
 
-.logo_hvid {
-    background-image: url(stoltze_logo_hvid.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 7vw;
-    width: 40vw;
+@media only screen and (max-width: 700px) {
+    .logo_hvid {
+        background-image: url(stoltze_logo_hvid.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 20vw;
+        width: 90vw;
 
-    margin-top: 2vw;
+        margin-top: 2vw;
+        z-index: 1;
 
-    position: absolute;
+        position: absolute;
 
-    animation: stoltze_logo 0.5s linear forwards;
+        animation: stoltze_logo 0.5s linear forwards;
+    }
+
+    #stop {
+        right: 6vw;
+    }
 }
+
+@media only screen and (min-width: 700px) {
+    #stop {
+        left: 31vw;
+    }
+
+    .logo_hvid {
+        background-image: url(stoltze_logo_hvid.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 20vw;
+        width: 40vw;
+
+        margin-top: 2vw;
+
+        position: absolute;
+
+        animation: stoltze_logo 0.5s linear forwards;
+    }
+}
+
 
 #skfit {
     position: fixed;
@@ -1868,9 +1865,7 @@ p {
 
 
 
-#stop {
-    left: 31vw;
-}
+
 
 
 /*
@@ -2223,53 +2218,6 @@ p {
     }
 }
 
-/*---------Load animation----------*/
-
-html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
-    background-size: cover;
-    height: 100vh;
-    display: table;
-
-}
-
-#wrapper {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-
-}
-
-#text {
-    position: fixed;
-    top: 32%;
-    left: 19.5%;
-    width: 60%;
-    font-size: 9.1rem;
-
-    text-align: center;
-}
-
-line {
-    stroke: #fff;
-    fill: #fff;
-    stroke-dasharray: 300;
-    opacity: 10;
-    animation: animate 5s;
-
-}
-
 @keyframes animate {
     0% {
         opacity: 0;
@@ -2295,6 +2243,111 @@ line {
     }
 }
 
-#forside {
-    display: none;
+/*---------Load animation----------*/
+
+@media only screen and (min-width: 700px) {
+
+    html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        background-size: cover;
+        height: 100vh;
+        display: table;
+
+    }
+
+    #wrapper {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+
+    }
+
+    #text {
+        position: fixed;
+        top: 30%;
+        left: 19.5%;
+        width: 60%;
+        font-size: 5vw;
+
+        text-align: center;
+    }
+
+    line {
+        stroke: #fff;
+        fill: #fff;
+        stroke-dasharray: 300;
+        opacity: 10;
+        animation: animate 5s;
+
+    }
+
+
+    #forside {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        background-size: cover;
+        height: 100vh;
+        display: table;
+
+    }
+
+    #wrapper {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+
+    }
+
+    #text {
+        position: fixed;
+        top: 40%;
+        left: 19.5%;
+        width: 60%;
+        font-size: 5vw;
+
+        text-align: center;
+    }
+
+    line {
+        stroke: #fff;
+        fill: #fff;
+        stroke-dasharray: 300;
+        opacity: 10;
+        animation: animate 5s;
+
+    }
+
+    #forside {
+        display: none;
+    }
+
 }

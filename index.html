@@ -12,6 +12,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Nicolette Stoltze</title>
+    <meta name="Nicolette Stoltze guldsmed forside">
+    <meta name="description" content="Nicolette Stoltze er en dansk smykkedesigner, der ejer smykkebutikken Stoltze. Som guldsmed i København, laver hun smukke og farverige smykker til kvinder online. Smykkeforetningen ligger på Classengade 18 2100 København Ø ">
     <link rel="stylesheet" href="https://use.typekit.net/mdl2npy.css">
     <link rel="stylesheet" href="https://use.typekit.net/dsa5gqh.css">
     <link rel="stylesheet" href="style.css">
@@ -53,7 +55,9 @@
         </svg>
 
     </div>
-    <div id="text">STOLTZE</div>
+    <div id="text">
+        <h1>STOLTZE</h1>
+    </div>
     <div id="forside" class="animate-bottom">
         <section>
             <div class="burgermenu">
@@ -192,6 +196,7 @@
                 document.getElementById("wrapper").style.display = "none";
                 document.getElementById("forside").style.display = "block";
 
+
             }
             start();
         }
@@ -279,19 +284,18 @@
 
         function scrollAnimation() {
             console.log(scrollAnimation)
-            window.onscroll = function() {}
+            window.onscroll = function() {
 
-            function myFunction() {
-                console.log(myFunction)
-                if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
+                function myFunction() {
+                    console.log(myFunction)
+                    if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
 
-                    document.getElementById("text").className = "";
-                    document.getElementById("stop").className = "logo_hvid";
+                        document.getElementById("text").style.display = "none";
 
-                } else {
+                    } else {
 
-                    document.querySelector("text").className = "logo_sort";
-                    document.getElementById("stop").className = "";
+                        document.querySelector("text").style.display = "block";
+                    }
                 }
             }
             showStart();

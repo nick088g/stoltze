@@ -40,6 +40,7 @@ p {
     height: 100%;
     top: 50%;
     left: 50%;
+    z-index: -1;
 }
 
 .splash {
@@ -60,6 +61,7 @@ p {
 #gul_kol {
     display: flex;
     background-color: #BC9C67;
+    text-align: center;
 }
 
 #groen_kol {
@@ -213,7 +215,6 @@ p {
 
         color: white;
         font-style: italic;
-
 
         cursor: default;
     }
@@ -484,6 +485,11 @@ p {
         margin-top: 5vh;
     }
 
+    #gul_kol,
+    #groen_kol {
+        text-align: center;
+    }
+
 
     .citat_gul {
 
@@ -684,6 +690,7 @@ p {
     margin-top: 3.5vw;
 
     color: black;
+    z-index: 3;
 }
 
 #navbar a:hover {
@@ -692,6 +699,22 @@ p {
 }
 
 /*------------burgermenu------------*/
+
+.ned_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-items: center;
+}
+
+.ned_menu a {
+    font-size: 1.3rem;
+    padding-right: 1.2rem;
+    text-decoration: none;
+    color: white;
+    margin-top: 3vh;
+}
+
 @media only screen and (max-width:820px) {
 
     .hide {
@@ -705,7 +728,7 @@ p {
         /*De 3 linjer til burgermenuen bliver her defineret*/
         display: flex;
         flex-wrap: wrap;
-        width: 35px;
+        width: 45px;
         height: 5px;
         background-color: black;
         margin: 6px 0;
@@ -732,26 +755,6 @@ p {
         transform: rotate(45deg) translate(-8px, -8px);
     }
 
-    .box {
-        /*Boksen som linksene ligger i */
-        height: 57.3vw;
-        width: auto;
-        background-color: rgba(222, 217, 213, 0.97);
-        z-index: 1;
-
-
-        position: fixed;
-        margin: 12vw 0vw 0vw 5vw;
-        border-radius: 2vw;
-    }
-
-    #navbar {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        align-items: flex-end;
-    }
-
     .burgermenu {
         position: fixed;
         z-index: 2;
@@ -760,14 +763,54 @@ p {
         top: 4vw;
     }
 
+    .ned_menu {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+
+    }
+
+    /*
+    .ned_menu a {
+        text-decoration: none;
+        color: #776C60;
+    }
+*/
+
+
+    .box {
+        /*Boksen som linksene ligger i */
+        height: 20vw;
+        width: auto;
+
+        position: fixed;
+        right: 0vw;
+        top: 10vh;
+        margin: 0vw 0vw 0vw 5vw;
+        border-radius: 2vw;
+    }
+
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+        background-color: rgba(255, 255, 255, 0.8);
+
+        width: 50vw;
+
+        padding-right: 4vw;
+    }
+
     #navbar a {
         display: block;
-        padding: 40px;
+        padding: 1.5vh;
         text-decoration: none;
-
-        margin-top: 3.5vw;
         transform: rotate(0deg);
     }
+
 
 }
 
@@ -1069,6 +1112,7 @@ p {
     .splash_billede {
         flex-basis: 200px;
         flex-grow: 1;
+        z-index: -1;
 
         flex-direction: row;
 
@@ -1273,6 +1317,7 @@ p {
     .splash_billede_om {
         flex-basis: 200px;
         flex-grow: 1;
+        z-index: -1;
 
         flex-direction: row;
 
@@ -1528,6 +1573,7 @@ p {
     .splash_billede_container {
         display: flex;
         flex-wrap: wrap;
+        z-index: -1;
 
     }
 

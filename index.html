@@ -30,7 +30,7 @@
                 }
 
                 .st3 {
-                    font-size: 104px;
+                    font-size: 10.4vw;
                 }
             </style>
             <g>
@@ -45,7 +45,7 @@
         </svg>
 
     </div>
-    <div class="text">STOLTZE</div>
+    <div class="logo_sort"></div>
     <div id="forside" class="animate-bottom">
         <section>
             <!--
@@ -55,9 +55,11 @@
 -->
             <div class="burgermenu">
                 <!--De tre streger som burgermenuen består-->
+                <!--
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
+-->
             </div>
             <div class="box">
                 <nav id="navbar" class="">
@@ -70,6 +72,7 @@
             </div>
 
             <section id="startside">
+
                 <div class="splash">
                     <div class="logo_animation"></div>
                     <div id="skift" class=""></div>
@@ -86,7 +89,7 @@
             </section>
 
             <section id="gul_kol">
-                <div id="stop"></div>
+                <div id="stop" class="logo_hvid"></div>
                 <div class="kollage">
                     <div class="gul_b1"></div>
                     <div class="gul_b2"></div>
@@ -94,11 +97,13 @@
                 </div>
                 <div class="se_mere">
                 </div>
+
                 <a href="singleView.html">
                     <div class="se_mere_pil">
                         <img class="hvid_pil" src="pil.svg" alt="se mere pil gule smykker">
                     </div>
                 </a>
+
             </section>
 
             <section id="pink_kol">
@@ -109,11 +114,13 @@
                     <div class="pink_b3"></div>
                     <div class="citat"></div>
                     <div class="se_mere_pink"></div>
+
                     <a href="singleView.html">
                         <div class="se_mere_pil_pink">
                             <img class="hvid_pil" src="pil.svg" alt="se mere pil pink smykker">
                         </div>
                     </a>
+
                 </div>
             </section>
 
@@ -125,11 +132,13 @@
                     <div class="blaa_b3"></div>
                     <div class="citat"></div>
                     <div class="se_mere_blaa"></div>
+
                     <a href="singleView.html">
                         <div class="se_mere_pil_blaa">
                             <img class="hvid_pil" src="pil.svg" alt="se mere pil blå smykker">
                         </div>
                     </a>
+
                 </div>
 
             </section>
@@ -142,11 +151,13 @@
                     <div class="groen_b3"></div>
                     <div class="citat_groen"></div>
                     <div class="se_mere_groen"></div>
+
                     <a href="singleView.html">
                         <div class="se_mere_pil_groen">
                             <img class="hvid_pil" src="pil.svg" alt="se mere pil grønne smykker">
                         </div>
                     </a>
+
                 </div>
             </section>
 
@@ -169,7 +180,6 @@
         let splash;
         let splashTwo;
         let splashThree;
-        const mq = window.matchMedia("(min-width: 700px)");
         document.addEventListener("DOMContentLoaded", start);
 
         var myVar;
@@ -250,7 +260,26 @@
                 document.querySelector(".footer_3").innerHTML = splashThree.content.rendered;
             }
             getJson3();
-            mM();
+            scrollAnimation();
+        }
+
+        function scrollAnimation() {
+            console.log(scrollAnimation)
+            window.onscroll = function() {}
+
+            function myFunction() {
+                console.log(myFunction)
+                if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
+
+                    document.getElementById("text").className = "";
+                    document.getElementById("stop").className = "logo_hvid";
+
+                } else {
+
+                    document.querySelector("text").className = "logo_sort";
+                    document.getElementById("stop").className = "";
+                }
+            }
             showStart();
         }
 
@@ -264,149 +293,6 @@
             document.querySelector(".box").classList.toggle("hide");
             document.querySelector(".burgermenu").classList.toggle("change");
             document.querySelector(".burgermenu").addEventListener("click", showStart);
-        }
-
-        function mM() {
-            console.log(mM)
-            if (matchMedia) {
-                const mq = window.matchMedia("(min-width: 700px)");
-                mq.addListener(WidthChange);
-                WidthChange(mq);
-            }
-        }
-
-        function WidthChange(mq) {
-            if (mq.matches) {
-                scrollAnimation();
-            }
-
-
-
-            function scrollAnimation() {
-                console.log(scrollAnimation)
-                window.onscroll = function() {
-                    console.log(window.scrollY);
-                    scrollNav();
-                }
-
-                function scrollNav() {
-                    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                        document.querySelector(".gul_b2").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".gul_b2").classList.remove("slideUp");
-                    }
-                    myFunction();
-                }
-
-                function myFunction() {
-                    if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
-                        document.getElementsByClassName("text").className = '';
-                        document.getElementById("stop").className = "logo_hvid";
-
-
-                    } else {
-                        document.getElementsByClassName("text").className = "text";
-                        document.getElementById("stop").className = "";
-
-
-                    }
-                    scrollImage();
-                }
-
-                function scrollImage() {
-                    if (document.body.scrollTop > 680 || document.documentElement.scrollTop > 680) {
-                        document.querySelector(".gul_b1").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".gul_b1").classList.remove("slideUp");
-                    }
-                    scrollCitat();
-                }
-
-                function scrollCitat() {
-                    if (document.body.scrollTop > 950 || document.documentElement.scrollTop > 950) {
-                        document.querySelector(".citat_gul").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".citat_gul").classList.remove("slideUp");
-                    }
-                    scrollPink();
-                }
-
-                function scrollPink() {
-                    if (document.body.scrollTop > 1816 || document.documentElement.scrollTop > 1816) {
-                        document.querySelector(".pink_b1").classList.add("slideUp");
-                        document.querySelector(".pink_b2").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".pink_b1").classList.remove("slideUp");
-                        document.querySelector(".pink_b2").classList.remove("slideUp");
-                    }
-                    scrollPink2();
-                }
-
-                function scrollPink2() {
-                    if (document.body.scrollTop > 2280 || document.documentElement.scrollTop > 2280) {
-                        document.querySelector(".pink_b3").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".pink_b3").classList.remove("slideUp");
-                    }
-                    scrollBlaa1();
-                }
-
-                function scrollBlaa1() {
-                    if (document.body.scrollTop > 3180 || document.documentElement.scrollTop > 3180) {
-                        document.querySelector(".blaa_b2").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".blaa_b2").classList.remove("slideUp");
-                    }
-                    scrollBlaa2();
-                }
-
-                function scrollBlaa2() {
-                    if (document.body.scrollTop > 3380 || document.documentElement.scrollTop > 3380) {
-                        document.querySelector(".blaa_b1").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".blaa_b1").classList.remove("slideUp");
-                    }
-                    scrollBlaa3();
-                }
-
-                function scrollBlaa3() {
-                    if (document.body.scrollTop > 3890 || document.documentElement.scrollTop > 3890) {
-                        document.querySelector(".blaa_b3").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".blaa_b3").classList.remove("slideUp");
-                    }
-                    scrollGroen1();
-                }
-
-                function scrollGroen1() {
-                    if (document.body.scrollTop > 4567 || document.documentElement.scrollTop > 4567) {
-                        document.querySelector(".groen_b3").classList.add("slideUp");
-                        document.querySelector(".citat_groen").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".groen_b3").classList.remove("slideUp");
-                        document.querySelector(".citat_groen").classList.remove("slideUp");
-                    }
-                    scrollGroen2();
-                }
-
-                function scrollGroen2() {
-                    if (document.body.scrollTop > 4700 || document.documentElement.scrollTop > 4700) {
-                        document.querySelector(".groen_b1").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".groen_b1").classList.remove("slideUp");
-                    }
-                    scrollGroen3();
-                }
-
-                function scrollGroen3() {
-                    if (document.body.scrollTop > 5160 || document.documentElement.scrollTop > 5160) {
-                        document.querySelector(".groen_b2").classList.add("slideUp");
-                    } else {
-                        document.querySelector(".groen_b2").classList.remove("slideUp");
-                    }
-
-                }
-            }
         }
     </script>
 </body>

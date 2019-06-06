@@ -16,6 +16,16 @@ p {
     font-style: normal;
 }
 
+.pil_ned {
+    position: fixed;
+    height: 5vw;
+    width: 5vw;
+
+    bottom: 0vw;
+    left: 47.5vw;
+    animation: pulse 1.5s linear infinite;
+}
+
 #startside {
     display: flex;
 }
@@ -78,7 +88,7 @@ p {
         background-size: cover;
         left: 45vw;
         top: 35vw;
-        opacity: 0;
+
 
     }
 
@@ -89,7 +99,7 @@ p {
         background-size: cover;
         top: -28vw;
         left: 25vw;
-        opacity: 0;
+
     }
 
     .pink_b1 {
@@ -100,7 +110,7 @@ p {
         left: 50vw;
         top: 5vw;
 
-        opacity: 0;
+
     }
 
     .pink_b2 {
@@ -111,7 +121,7 @@ p {
         top: -20vw;
         left: 25vw;
 
-        opacity: 0;
+
     }
 
     .pink_b3 {
@@ -122,7 +132,7 @@ p {
         left: 44vw;
         bottom: 29vw;
 
-        opacity: 0;
+
     }
 
     .blaa_b1 {
@@ -133,7 +143,6 @@ p {
         left: 50vw;
         top: 20vw;
 
-        opacity: 0;
 
     }
 
@@ -145,7 +154,7 @@ p {
         top: -22vw;
         left: 25vw;
 
-        opacity: 0;
+
     }
 
     .blaa_b3 {
@@ -156,7 +165,7 @@ p {
         left: 34vw;
         bottom: 24vw;
 
-        opacity: 0;
+
     }
 
     .groen_b1 {
@@ -167,7 +176,7 @@ p {
         left: 45vw;
         top: 16vw;
 
-        opacity: 0;
+
 
     }
 
@@ -179,7 +188,7 @@ p {
         bottom: 6.5vw;
         left: 25vw;
 
-        opacity: 0;
+
     }
 
     .groen_b3 {
@@ -190,13 +199,13 @@ p {
         left: 26vw;
         bottom: 80vw;
 
-        opacity: 0;
+
     }
 
     .citat_gul {
         width: 32vw;
         height: 20vw;
-        font-size: 3rem;
+        font-size: 3vw;
 
         position: absolute;
         left: 24vw;
@@ -205,14 +214,14 @@ p {
         color: white;
         font-style: italic;
 
-        opacity: 0;
+
         cursor: default;
     }
 
     .citat_groen {
         width: 32vw;
         height: 20vw;
-        font-size: 3rem;
+        font-size: 3vw;
 
         position: absolute;
         left: 53vw;
@@ -221,8 +230,126 @@ p {
         color: white;
         font-style: italic;
 
-        opacity: 0;
+
         cursor: default;
+    }
+
+    .se_mere {
+        width: 20vw;
+        height: 4vw;
+        font-size: 2.8rem;
+
+        position: relative;
+        left: 0vw;
+        top: 75vw;
+
+        color: white;
+        font-style: italic;
+
+        cursor: default;
+    }
+
+    .se_mere_pil {
+        position: relative;
+
+        height: 4vw;
+        width: 20vw;
+
+        top: 76.5vw;
+        right: 18vw;
+    }
+
+    .se_mere_pink {
+        width: 16vw;
+        height: 4vw;
+        font-size: 2.8rem;
+
+        position: absolute;
+
+        left: 64vw;
+        bottom: 3.5vw;
+
+        cursor: default;
+
+        color: white;
+        font-style: italic;
+
+    }
+
+    .se_mere_pil_pink {
+        position: absolute;
+
+        height: 4vw;
+        width: 20vw;
+
+        bottom: 2vw;
+        right: 16vw;
+    }
+
+    .se_mere_blaa {
+        width: 16vw;
+        height: 4vw;
+        font-size: 2.8rem;
+
+        cursor: default;
+
+        position: absolute;
+
+        left: 64vw;
+        bottom: 3.5vw;
+
+        color: white;
+        font-style: italic;
+
+    }
+
+    .se_mere_pil_blaa {
+        position: absolute;
+
+        height: 4vw;
+        width: 20vw;
+
+        bottom: 2vw;
+        right: 16vw;
+    }
+
+    .se_mere_pil:hover,
+    .se_mere_pil_gul:hover,
+    .se_mere_pil_pink:hover,
+    .se_mere_pil_blaa:hover,
+    .se_mere_pil_groen:hover {
+        animation: drej 0.1s linear forwards;
+    }
+
+
+    .se_mere_groen {
+        width: 10vw;
+        height: 4vw;
+        font-size: 2.8rem;
+
+
+        cursor: default;
+
+        position: absolute;
+
+        left: 64vw;
+        bottom: 10vw;
+
+
+
+        color: white;
+        font-style: italic;
+
+    }
+
+    .se_mere_pil_groen {
+        position: absolute;
+
+        height: 4vw;
+        width: 20vw;
+
+        bottom: 8.5vw;
+        right: 19vw;
     }
 }
 
@@ -357,25 +484,41 @@ p {
         margin-top: 5vh;
     }
 
-    .citat_gul {
-        /*
-        width: 32vw;
-        height: 20vw;
-        font-size: 3rem;
 
-        position: absolute;
-        left: 24vw;
-        bottom: 18vw;
+    .citat_gul {
 
         color: white;
         font-style: italic;
+        cursor: default;
+        font-size: 7vw;
+        padding: 2vw 2vw 20vw 2vw;
 
-        opacity: 0;
+        /*
+        width: 60vw;
+        height: 50vw;
+        font-size: 7vw;;
+
+        position: absolute;
+
+        left: 24vw;
+        bottom: 18vw;
+
+
+        color: white;
+        font-style: italic;
         cursor: default;
 */
+
     }
 
+
     .citat_groen {
+
+        color: white;
+        font-style: italic;
+        cursor: default;
+        font-size: 7vw;
+        padding: 2vw 2vw 2vw 2vw;
         /*
         width: 32vw;
         height: 20vw;
@@ -392,7 +535,124 @@ p {
         cursor: default;
 */
     }
+
+    .se_mere {
+        width: 40vw;
+        height: 15vw;
+        font-size: 2.8rem;
+
+        position: absolute;
+        left: 53vw;
+        bottom: -85vh;
+
+        color: white;
+        font-style: italic;
+    }
+
+    .se_mere_pil {
+        position: absolute;
+
+        height: 5vh;
+        width: 40vw;
+
+        top: 182.5vh;
+        right: 0vw;
+    }
+
+    .se_mere_pink {
+        width: 40vw;
+        height: 15vw;
+        font-size: 2.8rem;
+
+        position: relative;
+
+        left: 50vw;
+        bottom: 0vw;
+
+        cursor: default;
+
+        color: white;
+        font-style: italic;
+
+    }
+
+    .se_mere_pil_pink {
+        position: relative;
+
+        height: 10vw;
+        width: 50vw;
+
+        bottom: 2vw;
+        left: 50vw;
+    }
+
+    .se_mere_blaa {
+        width: 40vw;
+        height: 15vw;
+        font-size: 2.8rem;
+
+        cursor: default;
+
+        position: relative;
+
+        left: 50vw;
+        bottom: 3.5vw;
+
+        color: white;
+        font-style: italic;
+
+    }
+
+    .se_mere_pil_blaa {
+        position: relative;
+
+        height: 10vw;
+        width: 50vw;
+
+        bottom: 2vw;
+        left: 50vw;
+    }
+
+    .se_mere_pil:hover,
+    .se_mere_pil_gul:hover,
+    .se_mere_pil_pink:hover,
+    .se_mere_pil_blaa:hover,
+    .se_mere_pil_groen:hover {
+        animation: drej 0.1s linear forwards;
+    }
+
+
+    .se_mere_groen {
+        width: 40vw;
+        height: 15vw;
+        font-size: 2.8rem;
+
+        cursor: default;
+
+        position: relative;
+
+        left: 50vw;
+        bottom: 0vw;
+        z-index: 2;
+
+        color: white;
+        font-style: italic;
+
+    }
+
+    .se_mere_pil_groen {
+        position: relative;
+
+        height: 10vw;
+        width: 50vw;
+
+        bottom: 2vw;
+        left: 50vw;
+    }
+
+
 }
+
 
 /*-------------navigation--------------*/
 
@@ -417,7 +677,7 @@ p {
 
 #navbar a {
     display: block;
-    padding: 40px;
+    padding: 2.6vw;
     text-decoration: none;
 
     transform: rotate(-90deg);
@@ -516,15 +776,17 @@ p {
 .footer_container {
     display: flex;
     background-color: darkgrey;
-    height: 12vw;
+    height: 18vh;
 
     padding-left: 5vw;
 
+    /*
     flex-direction: row;
     align-items: center;
     justify-content: center;
+*/
 
-    /*            text-align: center;*/
+    text-align: center;
 }
 
 .footer_1,
@@ -533,7 +795,7 @@ p {
     flex-basis: 200px;
     flex-grow: 1;
 
-    padding-top: 3vw;
+    padding-top: 0vw;
 }
 
 .footer_3 img {
@@ -949,6 +1211,132 @@ p {
 
 /*-----------------om os siden---------------------*/
 
+@media only screen and (max-width: 700px) {
+
+    /*
+    .om_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+*/
+
+    /*
+
+    .om_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+*/
+
+
+
+    .splash_billede_container {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .splash_billede_om {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        flex-direction: row;
+
+
+        height: 50vh;
+        width: 100vw;
+
+
+        background-size: cover;
+
+        opacity: 0.6;
+    }
+
+
+    .om_bar {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        background-color: #E6D2D5;
+
+
+        height: 6vh;
+        flex-direction: column;
+
+    }
+
+    .om_logo_stoltze {
+        position: absolute;
+
+        height: auto;
+        width: 70vw;
+
+        top: 31.4vw;
+        left: -4vw;
+
+        transform: rotate(90deg);
+    }
+
+
+    .om_logo {
+        position: absolute;
+
+        height: 10vw;
+        width: auto;
+
+        top: 3vw;
+        left: 3vw;
+    }
+
+    .om_linje {
+        position: absolute;
+
+        height: 60vw;
+        width: auto;
+
+        left: 4vw;
+        top: 13vw;
+
+        transform: rotate(180deg);
+        transform: scaleY(-1);
+    }
+
+    .om_info_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .om_info_indhold {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        padding: 5vw;
+
+        color: black;
+    }
+
+    .om_info_container p {
+        font-size: 6vw;
+        margin-top: 5vw;
+    }
+
+    .om_info_container h2 {
+        font-size: 10vw;
+    }
+
+    .om_info_container h4 {
+        font-size: 1vw;
+        margin-left: 37vw;
+    }
+
+    .om_info_container2 {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 4vw;
+    }
+
+}
 
 @media only screen and (min-width: 700px) {
     /*
@@ -1090,25 +1478,17 @@ p {
         cursor: pointer;
     }
 
-    .se_mere {
-        position: absolute;
-    }
-
 }
+
+
+/*---------------kob smykker flow side---------------*/
 
 @media only screen and (max-width: 700px) {
 
-    .om_section {
-        display: flex;
-        flex-wrap: wrap;
-    }
 
-    /*
-    .om_container {
+    kob_container {
         display: flex;
-        flex-wrap: wrap;
     }
-*/
 
 
     .splash_billede_container {
@@ -1117,77 +1497,69 @@ p {
 
     }
 
-    .splash_billede_om {
+    .splash_billede_kob {
         flex-basis: 200px;
         flex-grow: 1;
 
-        flex-direction: row;
-
-
-        height: 50vh;
+        height: 90vw;
         width: 100vw;
 
-
         background-size: cover;
-
-        opacity: 0.6;
     }
 
-
-    .om_bar {
+    .kob_bar {
         flex-basis: 200px;
         flex-grow: 1;
 
-        background-color: #E6D2D5;
+        background-color: #D1DAE6;
 
 
         height: 6vh;
         flex-direction: column;
-
     }
 
-    .om_logo_stoltze {
+    .kob_logo_stoltze {
         position: absolute;
 
         height: auto;
-        width: 70vw;
+        width: 65vw;
 
-        top: 31.4vw;
-        left: -4vw;
+        top: 45vw;
+        left: -20vw;
 
         transform: rotate(90deg);
     }
 
-
-    .om_logo {
+    .kob_logo {
         position: absolute;
 
-        height: 10vw;
+        height: 12vw;
         width: auto;
 
-        top: 3vw;
-        left: 3vw;
+        top: 5vw;
+        left: 2vw;
     }
 
-    .om_linje {
+    .kob_linje {
         position: absolute;
 
-        height: 60vw;
+        height: 70vw;
         width: auto;
 
-        left: 4vw;
-        top: 13vw;
+        left: 2vw;
+        top: 16vw;
 
         transform: rotate(180deg);
-        transform: scaleY(-1);
+        /*        transform: scaleY(-1);*/
     }
 
-    .om_info_container {
+    .kob_info_container {
         display: flex;
         flex-wrap: wrap;
+
     }
 
-    .om_info_indhold {
+    .kob_info_indhold {
         flex-basis: 200px;
         flex-grow: 1;
 
@@ -1196,134 +1568,13 @@ p {
         color: black;
     }
 
-    .om_info_container p {
-        font-size: 6vw;
-        margin-top: 5vw;
-    }
-
-    .om_info_container h2 {
-        font-size: 10vw;
-    }
-
-    .om_info_container h4 {
-        font-size: 1vw;
-        margin-left: 37vw;
-    }
-
-    .om_info_container2 {
-        display: flex;
-        flex-wrap: wrap;
-
-        padding: 4vw;
-    }
-
-    .video_container {
-        /*        display: flex;*/
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        height: 32vh;
-        width: 100vw;
-
-    }
-
-    .se_mere {
-        position: absolute;
-    }
-}
-
-
-/*---------------kob smykker flow side---------------*/
-
-@media only screen and (max-width: 700px) {
-
-    kob_container {
-        display: block;
-    }
-
-    .splash_billede_kob {
-        flex-basis: 200px;
-        flex-grow: 1;
-
-        height: 53vw;
-        width: 70vw;
-
-        top: -10vw;
-        right: 0vw;
-
-        position: absolute;
-        background-size: cover;
-    }
-
-    .kob_bar {
-        flex-basis: 200px;
-        flex-grow: 1;
-
-        position: relative;
-
-        background-color: #D1DAE6;
-
-        height: 100vw;
-        width: 32vw;
-        flex-direction: column;
-    }
-
-    .kob_logo_stoltze {
-        position: absolute;
-
-        height: auto;
-        width: 35vw;
-
-        top: 18.7vw;
-        left: 14vw;
-
-        transform: rotate(90deg);
-    }
-
-    .kob_logo {
-        position: absolute;
-
-        height: 3.5vw;
-        width: auto;
-
-        top: 1vw;
-        left: 20vw;
-    }
-
-    .kob_linje {
-        position: absolute;
-
-        height: 32vw;
-        width: auto;
-
-        left: 18vw;
-        top: 4.2vw;
-
-        transform: rotate(180deg);
-        transform: scaleY(-1);
-    }
-
-    .kob_info_container {
-        padding: 4vw 4vw 4vw 6vw;
-
-        width: 68vw;
-        height: 25vw;
-
-        position: absolute;
-        left: 32vw;
-        top: 43vw;
-
-        color: black;
-
-    }
-
     .kob_info_container p {
-        font-size: 1.4vw;
+        font-size: 6vw;
         margin-top: 1.2vw;
     }
 
     .kob_info_container h2 {
-        font-size: 2.8vw;
+        font-size: 10vw;
     }
 
     .kob_info_container h4 {
@@ -1332,43 +1583,39 @@ p {
     }
 
     .kob_info_container2 {
-        padding: 0vw;
-        padding-left: 6vw;
+        display: flex;
+        flex-wrap: wrap;
 
-        width: 34vw;
-        height: 35vw;
-
-        position: absolute;
-        left: 32vw;
-        top: 68vw;
+        padding: 4vw;
     }
 
     .kob_info_container3 {
-        padding: 0vw;
-        padding-left: 6vw;
+        display: flex;
+        flex-wrap: wrap;
 
-        width: 34vw;
-        height: 35vw;
+        padding: 4vw;
 
-        position: absolute;
-        left: 66vw;
-        top: 68vw;
+
     }
 
     .billede_1 {
         width: 25vw;
-        height: 30vw;
+        height: 60vw;
 
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
+
+        flex-grow: 2;
     }
 
     .billede_2 {
         width: 25vw;
-        height: 30vw;
+        height: 64vw;
 
         background-size: contain;
         background-repeat: no-repeat;
+
+        flex-grow: 1;
 
     }
 
@@ -1525,6 +1772,14 @@ p {
     background-repeat: no-repeat;
     height: 7vw;
     width: 40vw;
+
+    position: fixed;
+    top: 32%;
+    left: 31%;
+    width: 60%;
+    font-size: 9.1rem;
+
+    text-align: center;
 }
 
 .logo_sort_transform {
@@ -1549,123 +1804,7 @@ p {
     position: fixed;
 }
 
-.se_mere {
-    width: 20vw;
-    height: 4vw;
-    font-size: 2.8rem;
 
-    position: relative;
-    left: 0vw;
-    top: 75vw;
-
-    color: white;
-    font-style: italic;
-
-    cursor: default;
-}
-
-.se_mere_pil {
-    position: relative;
-
-    height: 4vw;
-    width: 20vw;
-
-    top: 76.5vw;
-    right: 18vw;
-}
-
-.se_mere_pink {
-    width: 16vw;
-    height: 4vw;
-    font-size: 2.8rem;
-
-    position: absolute;
-
-    left: 64vw;
-    bottom: 3.5vw;
-
-    cursor: default;
-
-    color: white;
-    font-style: italic;
-
-}
-
-.se_mere_pil_pink {
-    position: absolute;
-
-    height: 4vw;
-    width: 20vw;
-
-    bottom: 2vw;
-    right: 16vw;
-}
-
-.se_mere_blaa {
-    width: 16vw;
-    height: 4vw;
-    font-size: 2.8rem;
-
-    cursor: default;
-
-    position: absolute;
-
-    left: 64vw;
-    bottom: 3.5vw;
-
-    color: white;
-    font-style: italic;
-
-}
-
-.se_mere_pil_blaa {
-    position: absolute;
-
-    height: 4vw;
-    width: 20vw;
-
-    bottom: 2vw;
-    right: 16vw;
-}
-
-.se_mere_pil:hover,
-.se_mere_pil_gul:hover,
-.se_mere_pil_pink:hover,
-.se_mere_pil_blaa:hover,
-.se_mere_pil_groen:hover {
-    animation: drej 0.1s linear forwards;
-}
-
-
-.se_mere_groen {
-    width: 10vw;
-    height: 4vw;
-    font-size: 2.8rem;
-
-
-    cursor: default;
-
-    position: absolute;
-
-    left: 64vw;
-    bottom: 10vw;
-
-
-
-    color: white;
-    font-style: italic;
-
-}
-
-.se_mere_pil_groen {
-    position: absolute;
-
-    height: 4vw;
-    width: 20vw;
-
-    bottom: 8.5vw;
-    right: 19vw;
-}
 
 #stop {
     left: 31vw;
@@ -1688,135 +1827,254 @@ p {
 
 /*----------singleView---------------*/
 
-#se_mere {
-    display: flex;
+@media only screen and (min-width: 700px) {
+
+    #se_mere {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .smykke_tekst_container {
+        flex-basis: 200px;
+        flex-grow: 5;
+
+        height: 80vh;
+        width: 0vw;
+        position: relative;
+
+        margin-right: 30vw;
+    }
+
+    .smykke_tekst {
+        height: 72vh;
+        width: 50vw;
+
+        background-color: #BC9C67;
+
+        left: 2vw;
+        top: 2vw;
+        position: absolute;
+
+        padding: 7vw;
+
+        color: white;
+        font-size: 2.4rem;
+    }
+
+    .smykke_billede_container {
+        flex-basis: 200px;
+        flex-grow: 8;
+    }
+
+    .smykke_billede {
+        background-size: cover;
+        background-repeat: no-repeat;
+        /*    position: absolute;*/
+
+        height: 80vh;
+        width: 50vw;
+    }
+
+    .tilbage {
+        width: 16vw;
+        height: 4vw;
+        font-size: 2.8vw;
+        /*    background-color: aqua;*/
+
+        cursor: default;
+
+        position: relative;
+
+        left: 8vw;
+        top: 63vh;
+
+        color: white;
+        font-style: italic;
+
+    }
+
+    .pil_tilbage {
+        position: absolute;
+
+        height: 8vh;
+        width: 20vw;
+
+        bottom: 6vh;
+        left: 0vw;
+
+    }
+
+    .hvid_pil_tilbage {
+        transform: scaleX(-1);
+    }
+
+    .pil_tilbage:hover {
+        animation: pil_tilbage 0.1s linear forwards;
+        transform: scaleX(-1);
+    }
+
+    #singleview_b_container {
+        display: flex;
+        flex-wrap: wrap;
+
+        flex-direction: row;
+    }
+
+    .singleview_b1 {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        background-size: cover;
+
+        margin: 2vw;
+    }
+
+    .billede1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .singleview_b2 {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        background-size: cover;
+
+        margin: 2vw;
+    }
+
+
+    .singleview_b3 {
+        flex-basis: 200px;
+        flex-grow: 1;
+
+        background-size: cover;
+
+        margin: 2vw;
+    }
+
 }
 
-.smykke_tekst_container {
-    flex-basis: 200px;
-    flex-grow: 5;
+@media only screen and (max-width: 700px) {
+    #se_mere {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-    height: 80vh;
-    width: 40vw;
-}
+    .smykke_tekst_container {
+        display: flex;
+        flex-wrap: wrap;
+        /*
+        flex-basis: 200px;
+        flex-grow: 5;
+*/
+        width: 100vw;
+    }
 
-.smykke_tekst {
-    height: 72vh;
-    width: 50vw;
+    .smykke_tekst {
+        background-color: #BC9C67;
 
-    background-color: #BC9C67;
+        padding: 4vw;
 
-    left: 2vw;
-    top: 2vw;
-    position: absolute;
+        color: white;
+        font-size: 2.4rem;
+    }
 
-    padding: 7vw;
+    .smykke_billede_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-    color: white;
-    font-size: 2.4rem;
-}
+    .smykke_billede {
 
-.smykke_billede_container {
-    flex-basis: 200px;
-    flex-grow: 8;
-}
+        flex-basis: 200px;
+        flex-grow: 1;
 
-.smykke_billede {
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*    position: absolute;*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        /*    position: absolute;*/
 
-    height: 80vh;
-    width: 50vw;
+        height: 80vh;
+        width: 100vw;
 
-    margin-left: 9vw;
-}
+        /*        margin-left: 9vw;*/
+    }
 
-.tilbage {
-    width: 16vw;
-    height: 4vw;
-    font-size: 2.8vw;
-    /*    background-color: aqua;*/
+    .tilbage {
+        width: 35vw;
+        height: 15vw;
+        font-size: 12vw;
 
-    cursor: default;
+        cursor: default;
 
-    position: relative;
+        position: relative;
 
-    left: 6vw;
-    top: 63vh;
+        left: 27vw;
+        bottom: 95vh;
 
-    color: white;
-    font-style: italic;
+        color: white;
+        font-style: italic;
 
-}
+    }
 
-.pil_tilbage {
-    position: relative;
+    .pil_tilbage {
+        position: absolute;
 
-    height: 8vh;
-    width: 20vw;
+        height: 8vh;
+        width: 70vw;
 
+        bottom: 24vh;
+        left: 0vw;
 
-    top: 30.5vw;
-    left: 2vw;
+    }
 
-}
+    .hvid_pil_tilbage {
+        transform: scaleX(-1);
+    }
 
-.hvid_pil_tilbage {
-    transform: scaleX(-1);
-}
+    .pil_tilbage:hover {
+        animation: pil_tilbage 0.1s linear forwards;
+        transform: scaleX(-1);
+    }
 
-.pil_tilbage:hover {
-    animation: pil_tilbage 0.1s linear forwards;
-    transform: scaleX(-1);
-}
+    #singleview_b_container {
+        display: flex;
+        flex-wrap: wrap;
 
-#singleview_b_container {
-    display: flex;
+        flex-direction: row;
 
-    flex-direction: row;
+        height: 100vh;
+        width: 100vw;
+    }
 
-    height: 50vh;
-    width: 100vw;
-}
+    .singleview_b1 {
 
-.singleview_b1 {
+        flex-basis: 200px;
+        flex-grow: 1;
 
-    flex-basis: 200px;
-    flex-grow: 1;
+        background-size: cover;
 
-    background-size: cover;
+        margin: 2vw;
+    }
 
-    margin: 2vw;
-}
+    .singleview_b2 {
+        flex-basis: 200px;
+        flex-grow: 1;
 
-.singleview_b2 {
-    flex-basis: 200px;
-    flex-grow: 1;
+        background-size: cover;
 
-    background-size: cover;
-
-    margin: 2vw;
-}
+        margin: 2vw;
+    }
 
 
-.singleview_b3 {
-    flex-basis: 200px;
-    flex-grow: 1;
+    .singleview_b3 {
+        flex-basis: 200px;
+        flex-grow: 1;
 
-    background-size: cover;
+        background-size: cover;
 
-    margin: 2vw;
-}
-
-.pil_ned {
-    position: fixed;
-    height: 5vw;
-    width: 5vw;
-
-    bottom: 0vw;
-    left: 47.5vw;
-    animation: pulse 1.5s linear infinite;
+        margin: 2vw;
+    }
 }
 
 /*----------------animationer-----------------*/
@@ -1897,7 +2155,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    text-align: center;
+
     background-size: cover;
     height: 100vh;
     display: table;
@@ -1913,13 +2171,17 @@ body {
 
 }
 
-.text {
+/*
+#text {
     position: fixed;
     top: 32%;
     left: 19.5%;
     width: 60%;
     font-size: 9.1rem;
+
+    text-align: center;
 }
+*/
 
 line {
     stroke: #fff;

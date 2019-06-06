@@ -16,7 +16,7 @@
             <div class="smykke_billede"></div>
         </div>
         <div class="smykke_tekst_container">
-            <div class="smykke_tekst gul"></div>
+            <div class="smykke_tekst pink"></div>
             <div class="tilbage"></div>
             <div class="pil_tilbage">
                 <a href="index.html">
@@ -37,9 +37,8 @@
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
-
             async function getJson() {
-                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/singleview/98";
+                let url = "http://nickhestehauge.dk/kea/stoltze/wordpress/wp-json/wp/v2/singleview/114";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(getJson)
@@ -49,19 +48,17 @@
             function visSingleview() {
                 console.log(splash)
 
-                document.querySelector(".singleview_b1").style.backgroundImage = "url(" + splash.b2_single.guid + ")"
-                document.querySelector(".singleview_b2").style.backgroundImage = "url(" + splash.b3_single.guid + ")"
-                document.querySelector(".singleview_b3").style.backgroundImage = "url(" + splash.b4_single.guid + ")"
-                document.querySelector(".smykke_billede").style.backgroundImage = "url(" + splash.b1_single.guid + ")"
+                document.querySelector(".singleview_b1").style.backgroundImage = "url(" + splash.b1_single.guid + ")"
+                document.querySelector(".singleview_b2").style.backgroundImage = "url(" + splash.b2_single.guid + ")"
+                document.querySelector(".singleview_b3").style.backgroundImage = "url(" + splash.b3_single.guid + ")"
+                document.querySelector(".smykke_billede").style.backgroundImage = "url(" + splash.b4_single.guid + ")"
                 document.querySelector(".smykke_tekst").innerHTML = splash.content.rendered
                 document.querySelector(".tilbage").innerHTML = splash.tilbage
 
             }
-
             getJson();
 
         }
-
     </script>
 </body>
 

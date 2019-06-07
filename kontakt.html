@@ -31,9 +31,9 @@
         <div class="box hide">
             <div class="ned_menu">
                 <nav id="navbar" class="">
-                    <a href="index.html">Forside</a>
+                    <a href="index.html#">Forside</a>
                     <a href="index.html#gul_kol">Lookbook</a>
-                    <a href="kobflow.html">Køb Smykker</a>
+                    <a href="kobflow.html">Købsguide</a>
                     <a href="om.html">Om Stoltze</a>
                     <a href="#">Kontakt</a>
                 </nav>
@@ -48,14 +48,16 @@
 
             <div class="kontakt_bar">
 
-                <img class="kontakt_logo" src="kontakt.svg" alt="">
-                <img class="kontakt_linje" src="kontakt_linje.svg" alt="">
-                <div class="info_butikker"></div>
-                <img class="kontakt_linje2" src="kontakt_linje.svg" alt="">
+                <img class="kontakt_logo" src="kontakt.svg" alt="kontakt">
+                <img class="kontakt_linje" src="kontakt_linje.svg" alt="hvid linje">
+                <div class="info_butikker">
+                    <div class="info_butikker_indhold"></div>
+                </div>
+                <img class="kontakt_linje2" src="kontakt_linje.svg" alt="lys streg">
 
             </div>
             <div class="kontakt_logo_stoltze">
-                <img src="stoltze_logo_hvid.svg" alt="">
+                <img src="stoltze_logo_hvid.svg" alt="stoltze">
             </div>
 
             <div class="kontakt_info_container1">
@@ -104,7 +106,7 @@
                 console.log(splash)
 
                 document.querySelector(".splash_billede").style.backgroundImage = "url(" + splash.splash_billede.guid + ")"
-                document.querySelector(".info_butikker").innerHTML = splash.content.rendered;
+                document.querySelector(".info_butikker_indhold").innerHTML = splash.content.rendered;
             }
             getJson();
             async function getJson2() {

@@ -35,13 +35,14 @@
                 }
 
                 .st2 {
-                    font-family: 'Didot-Bold';
+                    font-family: linotype-didot, serif;
+                    font-weight: 700;
+                    font-style: normal;
                 }
 
                 .st3 {
                     font-size: 10.4vw;
                 }
-
             </style>
             <g>
                 <line class="st0" x1="89.61" y1="138.24" x2="176.77" y2="65.62" />
@@ -55,7 +56,7 @@
         </svg>
 
     </div>
-    <div id="text">
+    <div id="text" class="">
         <h1>STOLTZE</h1>
     </div>
     <div id="forside" class="animate-bottom">
@@ -71,7 +72,7 @@
                     <nav id="navbar" class="">
                         <a href="#">Forside</a>
                         <a href="index.html#gul_kol">Lookbook</a>
-                        <a href="kobflow.html">Køb Smykker</a>
+                        <a href="kobflow.html">Købsguide</a>
                         <a href="om.html">Om Stoltze</a>
                         <a href="kontakt.html">Kontakt</a>
                     </nav>
@@ -79,7 +80,6 @@
             </div>
 
             <section id="startside">
-
                 <div class="splash">
                     <div class="logo_animation"></div>
                     <div id="skift" class=""></div>
@@ -110,7 +110,6 @@
                         <img class="hvid_pil" src="pil.svg" alt="se mere pil gule smykker">
                     </div>
                 </a>
-
             </section>
 
             <section id="pink_kol">
@@ -195,7 +194,7 @@
             function showPage() {
                 document.getElementById("wrapper").style.display = "none";
                 document.getElementById("forside").style.display = "block";
-
+                document.getElementById("text").className = "skjult";
 
             }
             start();
@@ -279,40 +278,39 @@
                 document.querySelector(".footer_3").innerHTML = splashFour.content.rendered;
             }
             getJson4();
+            showStart();
             scrollAnimation();
+        }
+
+
+        function showStart() {
+            console.log("burgermenu");
+            document.querySelector(".burgermenu").addEventListener("click", visMenu);
+            //denne funktion lytter efter klik på burgermenu, hvis går den videre til funktionen, visMenu
+        }
+
+        function visMenu() {
+            console.log("menufremme");
+            document.querySelector(".box").classList.toggle("hide"); //denne skifter hide til og fra - display none.
+            document.querySelector(".burgermenu").classList.toggle("change"); //Denne sætter change elementer igang, så burgermenuen skfiter fra x til burger og omvendt
+            document.querySelector(".burgermenu").addEventListener("click", showStart); //Når der bliver trykket går den tilbage til burgermenuens første funktion
         }
 
         function scrollAnimation() {
             console.log(scrollAnimation)
             window.onscroll = function() {
+                console.log(window.scrollY);
+                scrollNav();
+            }
 
-                function myFunction() {
-                    console.log(myFunction)
-                    if (document.body.scrollTop > 503 || document.documentElement.scrollTop > 503) {
-
-                        document.getElementById("text").style.display = "none";
-
-                    } else {
-
-                        document.querySelector("text").style.display = "block";
-                    }
+            function scrollNav() {
+                if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                    document.getElementById("text").classList.add("gemt");
+                } else {
+                    document.getElementById("text").classList.remove("gemt");
                 }
             }
-            showStart();
         }
-
-        function showStart() {
-            console.log("burgermenu");
-            document.querySelector(".burgermenu").addEventListener("click", visMenu);
-        }
-
-        function visMenu() {
-            console.log("menufremme");
-            document.querySelector(".box").classList.toggle("hide");
-            document.querySelector(".burgermenu").classList.toggle("change");
-            document.querySelector(".burgermenu").addEventListener("click", showStart);
-        }
-
     </script>
 </body>
 

@@ -12,7 +12,17 @@ img {
 
 p {
     font-family: athelas, serif;
-    font-weight: 400;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: linotype-didot, serif;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -946,6 +956,7 @@ p {
 
     .info_butikker h3 {
         margin-top: 1vw;
+        font-size: 1.3vw;
     }
 
     .info_butikker p {
